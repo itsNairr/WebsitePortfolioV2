@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+import Footer from "./components/Footer";
 import "./globals.css";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["300", "500", "400", "700", "800", "600"], variable: "--font-raleway" });
@@ -15,8 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${raleway.variable} font-sans`}>{children}</body>
+    <html lang="en" className={`${raleway.variable} font-sans`}>
+      <body>{children}</body>
+      <Footer />
     </html>
   );
 }
