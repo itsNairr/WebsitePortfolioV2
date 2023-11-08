@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/aos": "^3.0.7",
     "@types/react-lottie": "^1.2.8",
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "next": "14.0.1",
+    "particles.js": "^2.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^4.11.0",
     "react-lottie": "^1.2.3"
   },
   "devDependencies": {

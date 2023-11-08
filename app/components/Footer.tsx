@@ -14,7 +14,7 @@ import React from "react";
 	}
 
 	const year = new Date().getFullYear();
-	return <div className="text-center p-20 bg-black">&copy; {year} Harikrishna Nair </div>;
+	return <div className="text-center p-10 bg-black">&copy; {year} Harikrishna Nair </div>;
 }
 
 export default Footer;

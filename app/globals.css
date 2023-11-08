@@ -8,10 +8,11 @@ html {
   color: white;
 }
 
+/* page.tsx */
 
-.pfp{
-  -webkit-box-shadow: 0px 10px 50px -15px rgba(255,255,255,0.3); 
-  box-shadow: 0px 15px 16px -15px rgba(255,255,255,0.3);
+.pfp {
+  -webkit-box-shadow: 0px 10px 50px -15px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 15px 16px -15px rgba(255, 255, 255, 0.3);
 }
 
 #typewriter {
@@ -32,3 +33,17 @@ html {
   }
 }
 
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+#items:hover > .item {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.3;
+}
+
+#items:hover > .item:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}

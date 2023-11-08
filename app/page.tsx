@@ -4,11 +4,18 @@ import Image from "next/image";
 import Lottie from "react-lottie";
 import animationData from "../app/lotties/scroll-down-light.json";
 import { useEffect, useState } from "react";
-import 'animate.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const [greeting, setGreeting] = useState("Hey,");
-  //d3d3d3 light, 2f2f2f dark
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   useEffect(() => {
     function sleep(ms: number | undefined) {
       return new Promise((resolve) => setTimeout(resolve, ms));
@@ -86,17 +93,17 @@ export default function Home() {
     if (hour >= 0 && hour < 12) {
       setGreeting("Good Morning,");
     } else if (hour >= 12 && hour < 18) {
-      setGreeting("Good Afternoon,");
+      setGreeting("Hey!");
     } else {
       setGreeting("Good Evening,");
     }
   }, []);
 
   return (
-    <main className="min-h-screen max-h-full">
+    <main className="min-h-screen max-h-full pt-10">
       <section className="min-h-screen text-[50px] flex items-center">
         <div className="flex flex-col items-center w-full">
-          <div className="pb-[80px]">
+          <div className="pb-[80px]" data-aos="zoom-in">
             <Image
               alt=""
               src="/harinobg.png"
@@ -113,16 +120,16 @@ export default function Home() {
             </div>
           </div>
           <div onClick={handleScroll}>
-            <Lottie options={defaultOptions} height={50} width={50}/>
+            <Lottie options={defaultOptions} height={50} width={50} />
           </div>
         </div>
       </section>
       <section className="min-h-screen flex items-center" id="navscreen">
-        <div className="block ml-[200px] text-[75px] font-light">
-          <div className="">About</div>
-          <div>Experience</div>
-          <div>Projects</div>
-          <div>Contact</div>
+        <div className="block ml-[200px] text-[75px] font-light" id="items">
+          <div data-aos="fade-right" data-aos-duration="1000" className="item">Experience</div>
+          <div data-aos="fade-right" data-aos-duration="1200" className="item">Projects</div>
+          <div data-aos="fade-right" data-aos-duration="1400" className="item">About</div>
+          <div data-aos="fade-right" data-aos-duration="1600" className="item">Contact</div>
         </div>
       </section>
     </main>
