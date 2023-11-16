@@ -2,12 +2,15 @@
 
 import Image from "next/image";
 import Lottie from "react-lottie";
-import animationData from "../app/lotties/scroll-down-light.json";
-import { useEffect, useState } from "react";
+import animationDataLight from "../app/lotties/scroll-down-light.json";
+import animationDataDark from "../app/lotties/scroll-down-dark.json";
+import { ThemeContext } from "./Providers";
+import { useEffect, useState, useContext } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+  const { isDark } = useContext(ThemeContext);
   const [greeting, setGreeting] = useState("Hey,");
   useEffect(() => {
     AOS.init({
@@ -74,7 +77,7 @@ export default function Home() {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: isDark ? animationDataLight : animationDataDark,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -100,7 +103,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen max-h-full pt-10">
+    <main className="min-h-screen max-h-full pt-10 dark:text-white dark:bg-dark">
       <section className="min-h-screen text-[50px] flex items-center">
         <div className="flex flex-col items-center w-full">
           <div className="pb-[80px]" data-aos="zoom-in">
