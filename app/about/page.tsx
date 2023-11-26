@@ -2,7 +2,7 @@ import React from 'react';
 
 function page(prop: any) {
     return (
-        <div className='text-white'>
+        <div className='min-h-screen max-h-full pt-10'>
             ABOUT
         </div>
     );

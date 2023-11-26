@@ -2,20 +2,21 @@
 
 import Image from "next/image";
 import Lottie from "react-lottie";
+import Link from "next/link";
 import animationDataLight from "../app/lotties/scroll-down-light.json";
 import animationDataDark from "../app/lotties/scroll-down-dark.json";
-import { ThemeContext } from "./Providers";
-import { useEffect, useState, useContext } from "react";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
-  const { isDark } = useContext(ThemeContext);
-  const [greeting, setGreeting] = useState("Hey,");
+  const isDark = useSelector((state:any) => state.themeReducer.isDark);
+  const [greeting, setGreeting] = useState("Hello,");
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true,
+      once: false,
     });
   }, []);
 
@@ -103,21 +104,21 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen max-h-full pt-10 dark:text-white dark:bg-dark">
-      <section className="min-h-screen text-[50px] flex items-center">
+    <main className="min-h-screen max-h-full pt-10">
+      <section className="min-h-screen text-[50px] sm:text-[40px] xs:text-[30px] flex items-center">
         <div className="flex flex-col items-center w-full">
-          <div className="pb-[80px]" data-aos="zoom-in">
+          <div className="pb-[80px] sm:pb-[70px] xs:pb-[60px] xs:w-[350px] xs:h-[350px] sm:w-[400px] sm:h-[400px]" data-aos="zoom-in">
             <Image
               alt=""
               src="/harinobg.png"
               width={450}
               height={450}
-              className=" rounded-[10%] pfp"
+              className="rounded-[10%] pfp"
             />
           </div>
           <div>
-            <div className="text-center font-medium pb-[50px]">
-              {greeting} I'm Hari Nair
+            <div className="text-center font-medium pb-[50px] px-5">
+              {greeting} I'm <span className="font-bold">Hari Nair</span>
               <br />I am a <span id="typewriter"></span>
               <span id="cursor">|</span>
             </div>
@@ -128,10 +129,10 @@ export default function Home() {
         </div>
       </section>
       <section className="min-h-screen flex items-center" id="navscreen">
-        <div className="block ml-[200px] text-[75px] font-light" id="items">
+        <div className="block ml-[10%] text-[75px] sm:text-[60px] xs:text-[50px] font-light" id="items">
           <div data-aos="fade-right" data-aos-duration="1000" className="item">Experience</div>
           <div data-aos="fade-right" data-aos-duration="1200" className="item">Projects</div>
-          <div data-aos="fade-right" data-aos-duration="1400" className="item">About</div>
+          <div data-aos="fade-right" data-aos-duration="1400" className="item"><Link href={"/about"}>About</Link></div>
           <div data-aos="fade-right" data-aos-duration="1600" className="item">Contact</div>
         </div>
       </section>
