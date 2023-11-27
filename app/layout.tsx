@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Footer from "./components/Footer";
 import "./globals.css";
-import Navbar from "./components/Navbar.jsx";
 import ReduxProvider from "./redux/provider";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["300", "500", "400", "700", "800", "600"], variable: "--font-raleway" });
@@ -21,7 +20,6 @@ export default function RootLayout({
     <html lang="en" className={`${raleway.variable} font-sans`}>
       <body>
         <ReduxProvider>
-          <Navbar />
         {children}
         <Footer />
       </ReduxProvider>

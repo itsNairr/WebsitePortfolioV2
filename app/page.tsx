@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Lottie from "react-lottie";
 import Link from "next/link";
 import animationDataLight from "../app/lotties/scroll-down-light.json";
@@ -9,6 +8,7 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import NavbarMain from "./components/NavbarMain";
 
 export default function Home() {
   const isDark = useSelector((state:any) => state.themeReducer.isDark);
@@ -104,30 +104,29 @@ export default function Home() {
   }, []);
 
   return (
+    <>
+    <NavbarMain />
     <main className="min-h-screen max-h-full pt-10">
       <section className="min-h-screen text-[50px] sm:text-[40px] xs:text-[30px] flex items-center">
         <div className="flex flex-col items-center w-full">
-          <div className="pb-[80px] sm:pb-[70px] xs:pb-[60px] xs:w-[350px] xs:h-[350px] sm:w-[400px] sm:h-[400px]" data-aos="zoom-in">
-            <Image
-              alt=""
-              src="/harinobg.png"
-              width={450}
-              height={450}
-              className="rounded-[10%] pfp"
-            />
-          </div>
           <div>
-            <div className="text-center font-medium pb-[50px] px-5">
+            <div className="text-center font-medium pb-[50px] px-5 z-10">
               {greeting} I'm <span className="font-bold">Hari Nair</span>
               <br />I am a <span id="typewriter"></span>
               <span id="cursor">|</span>
             </div>
           </div>
-          <div onClick={handleScroll}>
-            <Lottie options={defaultOptions} height={50} width={50} />
+          <div onClick={handleScroll} className="absolute bottom-[5%] z-10">
+          <Lottie
+                options={defaultOptions}
+                height={50}
+                width={50}
+                isClickToPauseDisabled={true} // Disable click to pause
+              />
           </div>
         </div>
       </section>
+      <div className="container"><div className="gradient"></div></div>
       <section className="min-h-screen flex items-center" id="navscreen">
         <div className="block ml-[10%] text-[75px] sm:text-[60px] xs:text-[50px] font-light" id="items">
           <div data-aos="fade-right" data-aos-duration="1000" className="item">Experience</div>
@@ -137,5 +136,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
