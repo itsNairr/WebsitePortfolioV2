@@ -4,10 +4,15 @@
 
 html {
   scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   /* background-color: rgb(20, 20, 20); */
   /* color: white; */
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
 /* page.tsx */
 
 .dark .pfp {
@@ -82,7 +87,7 @@ html {
 
 .gradient {
   --size: 150px;
-  --speed: 10s;
+  --speed: 5s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
   width: var(--size);

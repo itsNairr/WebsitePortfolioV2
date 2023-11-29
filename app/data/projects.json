@@ -1,0 +1,12 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Store Website: Spice Mart",
+      "description": "I developed a customer-centric website that allows patrons to browse menu options and discover current promotions with ease. The site boasts a responsive front end, built Next.js and Tailwind CSS. At its core, a dynamic RESTful API built with Next.js Server enables staff to effortlessly manage menu updates, while the integration of Auth0 ensures secure administrator access for content control. Additionally, MongoDB Atlas underpins the system as the robust database solution, streamlining the management of menu data for an optimized user experience.",
+      "tags": ["Next.js", "Tailwind CSS", "React", "MongoDB", "REST-APIs"],
+      "url": "https://spicemartbarrie.ca/",
+      "github": "https://github.com/itsNairr/SpiceMart"
+    }
+  ]
+}

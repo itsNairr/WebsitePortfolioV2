@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useRef, useEffect, useState} from "react";
+import React, {useRef, useEffect, useState, use} from "react";
 import { IoSunny } from "react-icons/io5";  
 import { BsMoonStarsFill } from "react-icons/bs"
 import Link from "next/link";
@@ -29,18 +29,19 @@ function Navbar() {
     setToggle(!tog);
   };
 
+
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.themeReducer.isDark);
   return (
-    <main className="fixed w-full z-50 dark:bg-dark/[.5] bg-light/[.5] duration-500">
+    <main id="nav" className="fixed w-full z-50 dark:bg-dark/[1] bg-light/[1] duration-500">
       <div className="dark:text-white px-10 py-7">
         <div className="flex flex-row text-[30px] gap-10 justify-between items-center">
           <Link href={"/"} className="font-bold" data-aos="zoom-in" >Hari Nair</Link>
           <div id="items" className="flex flex-row gap-10">
-            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in">Experience</div>
-            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in">Projects</div>
-            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in">About</div>
-            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in">Contact</div>
+            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/experience"}>Experience</Link></div>
+            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/skills-projects"}>Skills & Projects</Link></div>
+            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/about"}>About</Link></div>
+            <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/contact"}>Contact</Link></div>
             <div className="hidden xs:contents sm:contents item" >
             <input
               ref={checkBoxRef}
@@ -62,7 +63,7 @@ function Navbar() {
           <div className="hidden xs:contents sm:contents">
           <div className="flex flex-col gap-10 items-end text-[20px] mt-10">
             <Link onClick={handleToggle} href={"/experience"} data-aos="zoom-in">Experience</Link>
-            <Link onClick={handleToggle} href={"/projects"} data-aos="zoom-in">Projects</Link>
+            <Link onClick={handleToggle} href={"/skills-projects"} data-aos="zoom-in">Skills & Projects</Link>
             <Link onClick={handleToggle} href={"/about"} data-aos="zoom-in">About</Link>
             <Link onClick={handleToggle} href={"/contact"} data-aos="zoom-in">Contact</Link>
           </div>

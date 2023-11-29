@@ -1,21 +1,14 @@
 "use client"
 
 import React from "react";
+import { TbFileCv } from "react-icons/tb";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 import { IoSunny } from "react-icons/io5";  
 import { BsMoonStarsFill } from "react-icons/bs"
 import Link from "next/link";
 import { toggleTheme } from "../redux/features/themeSlice"; 
 import { useDispatch, useSelector } from "react-redux";
-import AOS from "aos";
-import "aos/dist/aos.css";
 function NavbarMain() {
-  React.useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
 
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.themeReducer.isDark);
@@ -27,7 +20,7 @@ function NavbarMain() {
           <div id="items" className="flex flex-row gap-10">
             <a className="item" data-aos="zoom-in" href="https://www.linkedin.com/in/hari-nair-0a1627251/" target="blank"><FaLinkedinIn /></a>
             <a className="item" data-aos="zoom-in" href="https://github.com/itsNairr" target="blank"><FaGithub /></a>
-            <a className="item" data-aos="zoom-in" href="mailto:hariknair139@gmail.com"><FaEnvelope /></a>
+            <a className="item" data-aos="zoom-in" href="mailto:hariknair139@gmail.com"><TbFileCv /></a>
             <button className="item" data-aos="zoom-in" onClick={() => dispatch(toggleTheme())}>{isDark && <BsMoonStarsFill />}{!isDark && <IoSunny/>}</button>
           </div>
         </div>

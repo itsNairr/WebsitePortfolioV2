@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 
 
 export const metadata = {
-  title: 'About',
+  title: 'Skills and Projects',
   description: '',
 }
  

@@ -15,7 +15,7 @@ export default function Home() {
   const [greeting, setGreeting] = useState("Hello,");
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1000,
       once: false,
     });
   }, []);
@@ -39,7 +39,7 @@ export default function Home() {
 
     const writeLoop = async () => {
       try {
-        await sleep(1000);
+        await sleep(500);
         while (true) {
           let curWord = titles[curPhraseIndex];
 
@@ -129,10 +129,10 @@ export default function Home() {
       <div className="container"><div className="gradient"></div></div>
       <section className="min-h-screen flex items-center" id="navscreen">
         <div className="block ml-[10%] text-[75px] sm:text-[60px] xs:text-[50px] font-light" id="items">
-          <div data-aos="fade-right" data-aos-duration="1000" className="item">Experience</div>
-          <div data-aos="fade-right" data-aos-duration="1200" className="item">Projects</div>
-          <div data-aos="fade-right" data-aos-duration="1400" className="item"><Link href={"/about"}>About</Link></div>
-          <div data-aos="fade-right" data-aos-duration="1600" className="item">Contact</div>
+          <div data-aos="fade-right" className="item">Experience</div>
+          <div data-aos="fade-right" className="item"><Link href={"/skills-projects"}>Skills & Projects</Link></div>
+          <div data-aos="fade-right" className="item"><Link href={"/about"}>About</Link></div>
+          <div data-aos="fade-right" className="item">Contact</div>
         </div>
       </section>
     </main>
