@@ -19,7 +19,7 @@ function page(prop: any) {
           />
         </div>
         <h1 className="text-[40px] font-bold mb-5">About Me</h1>
-        <p className="text-lg mx-5 text-center" data-aos="zoom-in">
+        <p className="text-lg mx-[10vw] text-center" data-aos="zoom-in">
           Currently in my second year of <b>Mechatronics and Robotics Engineering</b> at <b>Queen's University</b>, 
           I am a student from Barrie, Ontario,
           driven by a passion for robotics, software development, and artificial
@@ -35,7 +35,6 @@ function page(prop: any) {
           skills in a practical setting and make meaningful contributions to the
           field of engineering.
         </p>
-        {/* <LearnMore /> */}
       </div>
     </div>
   );

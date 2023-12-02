@@ -6,16 +6,8 @@ import { BsMoonStarsFill } from "react-icons/bs"
 import Link from "next/link";
 import { toggleTheme } from "../redux/features/themeSlice"; 
 import { useDispatch, useSelector } from "react-redux";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import "./navbar.css"
 function Navbar() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
   const [tog, setToggle] = useState(false);
   const checkBoxRef = useRef(null);
 

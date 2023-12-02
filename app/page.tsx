@@ -16,8 +16,9 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
     });
+    AOS.refresh();
   }, []);
 
   useEffect(() => {

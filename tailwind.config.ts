@@ -26,7 +26,9 @@ const config: Config = {
       },
       backgroundColor: {
         light: "rgb(255, 255, 255)",
+        cardlight: "rgb(240, 240, 240)",
         dark: "rgb(20, 20, 20)",
+        carddark: "rgb(35, 35, 35)",
       },
       fontFamily: {
         sans: ['var(--font-raleway)'],

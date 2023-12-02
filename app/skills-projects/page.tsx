@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import LearnMore from "../components/LearnMore";
 import Project from "../components/Project";
 import "./skills-projects.css";
 import {
@@ -28,8 +27,10 @@ function page(prop: any) {
   return (
     <div className="min-h-screen max-h-full pt-[120px] pb-[100px] w-full">
       <div className="flex flex-col items-center">
-      <h1 className="text-[40px] font-bold mb-5">Projects</h1>
-      <div className="mx-5 mb-10 flex flex-row flex-wrap justify-around gap-10"><Project /></div>
+        <h1 className="text-[40px] font-bold mb-5">Projects</h1>
+          <div className="mx-5 mb-10 flex flex-row flex-wrap justify-around gap-10">
+            <Project />
+          </div>
         <h1 className="text-[40px] font-bold">Skills</h1>
         <h1 className="text-[30px] mb-5">Languages</h1>
         <div className="flex flex-row flex-wrap text-[60px] sm:text-[50px] xs:text-[40px] gap-[50px] justify-evenly w-[90%]">
@@ -40,9 +41,7 @@ function page(prop: any) {
           <SiHtml5 data-aos="zoom-in" className="iconshadow" />{" "}
           <SiCss3 data-aos="zoom-in" className="iconshadow" />
         </div>
-        <h1 className="text-[30px] my-5">
-          Frameworks, Runtimes, & Libraries
-        </h1>
+        <h1 className="text-[30px] my-5">Frameworks, Runtimes, & Libraries</h1>
         <div className="flex flex-row flex-wrap text-[60px] sm:text-[50px] xs:text-[40px] gap-[50px] justify-evenly w-[90%]">
           <SiNextdotjs data-aos="zoom-in" className="iconshadow" />{" "}
           <SiReact data-aos="zoom-in" className="iconshadow" />{" "}
@@ -61,7 +60,6 @@ function page(prop: any) {
           <SiPostgresql data-aos="zoom-in" className="iconshadow" />
           <SiFirebase data-aos="zoom-in" className="iconshadow" />
         </div>
-        {/* <LearnMore /> */}
       </div>
     </div>
   );
