@@ -28,7 +28,8 @@ function Navbar() {
     <main id="nav" className="fixed w-full z-50 dark:bg-dark/[1] bg-light/[1] duration-500">
       <div className="dark:text-white px-10 py-7">
         <div className="flex flex-row text-[30px] gap-10 justify-between items-center">
-          <Link href={"/"} className="font-bold" data-aos="zoom-in" >Hari Nair</Link>
+        <Link href={"/"} className="font-bold xs:hidden" data-aos="zoom-in">Hari Nair</Link>
+          <Link href={"/"} className="font-bold hidden xs:contents" data-aos="zoom-in">HN</Link>
           <div id="items" className="flex flex-row gap-10">
             <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/experience"}>Experience</Link></div>
             <div className="text-[25px] item sm:hidden xs:hidden" data-aos="zoom-in"><Link href={"/skills-projects"}>Skills & Projects</Link></div>

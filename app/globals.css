@@ -81,10 +81,6 @@ html::-webkit-scrollbar {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 .gradient {
   --size: 150px;
   --speed: 5s;
@@ -113,7 +109,7 @@ html::-webkit-scrollbar {
   align-items: center;
   overflow: hidden;
   transition: all 0.25s ease-out;
-  width: full;
+  width: screen;
 }
 
 @keyframes rotate {

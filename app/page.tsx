@@ -15,10 +15,19 @@ export default function Home() {
   const [greeting, setGreeting] = useState("Hello,");
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1200,
       once: true,
     });
     AOS.refresh();
+    const date = new Date();
+    const hour = date.getHours();
+    if (hour >= 0 && hour < 12) {
+      setGreeting("Good Morning,");
+    } else if (hour >= 12 && hour < 18) {
+      setGreeting("Hey!");
+    } else {
+      setGreeting("Good Evening,");
+    }
   }, []);
 
   useEffect(() => {
@@ -40,6 +49,7 @@ export default function Home() {
 
     const writeLoop = async () => {
       try {
+        const element = document.getElementById("typewriter");
         await sleep(500);
         while (true) {
           let curWord = titles[curPhraseIndex];
@@ -72,7 +82,6 @@ export default function Home() {
         console.error(error);
       }
     };
-
     writeLoop();
   }, []);
 
@@ -92,21 +101,8 @@ export default function Home() {
     }
   }
 
-  useEffect(() => {
-    const date = new Date();
-    const hour = date.getHours();
-    if (hour >= 0 && hour < 12) {
-      setGreeting("Good Morning,");
-    } else if (hour >= 12 && hour < 18) {
-      setGreeting("Hey!");
-    } else {
-      setGreeting("Good Evening,");
-    }
-  }, []);
-
   return (
-    <>
-    <NavbarMain />
+    <><NavbarMain />
     <main className="min-h-screen max-h-full pt-10">
       <section className="min-h-screen text-[50px] sm:text-[40px] xs:text-[30px] flex items-center">
         <div className="flex flex-col items-center w-full">
@@ -136,7 +132,6 @@ export default function Home() {
           <div data-aos="fade-right" className="item">Contact</div>
         </div>
       </section>
-    </main>
-    </>
+    </main> </> 
   );
 }

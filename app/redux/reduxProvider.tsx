@@ -3,15 +3,15 @@
 import { Provider } from "react-redux";
 import { store } from "./store";
 import React from "react";
-import TailwindProvider from "./tailwindProvider";
+import WebsiteProvider from "./websiteProvider";
 import Footer from "../components/Footer";
 
 
 export default function ReduxProvider({children}: {children: any }) {
   return <Provider store={store}>
-    <TailwindProvider>
+    <WebsiteProvider>
       {children}
       <Footer/>
-    </TailwindProvider>
+    </WebsiteProvider>
     </Provider>;
 }

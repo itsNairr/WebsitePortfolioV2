@@ -1,5 +1,4 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 import Project from "../components/Project";
 import "./skills-projects.css";
 import {
@@ -41,7 +40,7 @@ function page(prop: any) {
           <SiHtml5 data-aos="zoom-in" className="iconshadow" />{" "}
           <SiCss3 data-aos="zoom-in" className="iconshadow" />
         </div>
-        <h1 className="text-[30px] my-5">Frameworks, Runtimes, & Libraries</h1>
+        <h1 className="text-[30px] my-5">Frameworks & Libraries</h1>
         <div className="flex flex-row flex-wrap text-[60px] sm:text-[50px] xs:text-[40px] gap-[50px] justify-evenly w-[90%]">
           <SiNextdotjs data-aos="zoom-in" className="iconshadow" />{" "}
           <SiReact data-aos="zoom-in" className="iconshadow" />{" "}

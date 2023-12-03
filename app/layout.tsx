@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import Footer from "./components/Footer";
 import "./globals.css";
-import ReduxProvider from "./redux/provider";
+import ReduxProvider from "./redux/reduxProvider";
 
 const raleway = Raleway({ subsets: ["latin"], weight: ["300", "500", "400", "700", "800", "600"], variable: "--font-raleway" });
 
