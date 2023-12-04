@@ -6,12 +6,13 @@ import React from "react";
 import WebsiteProvider from "./websiteProvider";
 import Footer from "../components/Footer";
 
-
-export default function ReduxProvider({children}: {children: any }) {
-  return <Provider store={store}>
-    <WebsiteProvider>
-      {children}
-      <Footer/>
-    </WebsiteProvider>
-    </Provider>;
+export default function ReduxProvider({ children }: { children: any }) {
+  return (
+    <Provider store={store}>
+      <WebsiteProvider>
+        {children}
+        <Footer />
+      </WebsiteProvider>
+    </Provider>
+  );
 }

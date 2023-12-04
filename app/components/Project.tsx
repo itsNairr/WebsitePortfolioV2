@@ -20,10 +20,7 @@ export default function Project(props: any) {
   return (
     <>
       {projectsData.projects.map((project: any) => (
-        <div
-          key={project.id}
-          className="xs:w-full"
-        >
+        <div key={project.id} className="xs:w-full" data-aos="flip-up">
           <div className="p-5 h-[175px] dark:bg-carddark bg-cardlight rounded-lg flex flex-col justify-between">
             <section>
               <div className="text-[20px] mb-1">{project.title}</div>
@@ -39,16 +36,28 @@ export default function Project(props: any) {
                   ))}
               </div>
             </section>
-            <div className="flex flex-row gap-3 text-[20px] items-center justify-between">
-              <div className="flex flex-row gap-3 text-[20px] items-center">
-              {project.url && <a href={project.url} target="blank" className="text-[25px]">
-                <GoArrowUpRight/>
-              </a>}
-              <a href={project.github} target="blank">
-                <FaGithub />
-              </a>
+            <div
+              id="items"
+              className="flex flex-row gap-3 text-[20px] items-center justify-between"
+            >
+              <div className="flex flex-row gap-3 text-[20px] items-center item">
+                {project.url && (
+                  <a href={project.url} target="blank" className="text-[25px]">
+                    <GoArrowUpRight />
+                  </a>
+                )}
+                {project.github && (
+                  <a href={project.github} target="blank">
+                    <FaGithub />
+                  </a>
+                )}
               </div>
-              <Link href={`/skills-projects/${project.id}`}><FaArrowRight/></Link>
+              <Link
+                href={`/skills-projects/${project.id}`}
+                className="flex flex-row items-center gap-2 item"
+              >
+                <b className="text-[13px]">Learn More</b> <FaArrowRight />
+              </Link>
             </div>
           </div>
         </div>

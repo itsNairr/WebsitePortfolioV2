@@ -43,8 +43,7 @@
       "id": 6,
       "title": "Robotic Assistive Arm Prototype",
       "tags": ["Arduino", "SOLIDWORKS", "Circuits"],
-      "description": "In my first year course, APSC-101, me and three others were formed in a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything together, a final, functioning protype will be created.",
-      "github": "https://github.com/itsNairr/Maze-Solver-Generator"
+      "description": "In my first year course, APSC-101, me and three others were formed in a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything together, a final, functioning protype will be created."
     }
   ]
 }

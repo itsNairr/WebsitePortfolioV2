@@ -8,7 +8,7 @@ function Footer() {
   const year = new Date().getFullYear();
   return (
     <>
-      <div className="flex flex-col items-center dark:text-white p-10 gap-10 dark:bg-black bg-light">
+      <div className="flex flex-col items-center dark:text-white p-10 gap-10 dark:bg-dark bg-light">
         <div id="items" className="flex flex-row gap-10 text-[30px]">
           <a
             className="item"
