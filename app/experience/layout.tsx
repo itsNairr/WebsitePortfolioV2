@@ -12,7 +12,7 @@ export default function OrderLayout({
 }: {
   children: React.ReactNode;
 }) {
- return (
-      <section><Navbar/>{children}</section>
-  )
+  return (
+    <section><Navbar/>{children}</section>
+    )
 }

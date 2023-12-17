@@ -15,13 +15,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className={`${raleway.variable} font-sans`}>
+  return <html lang="en" className={`${raleway.variable} font-sans`}>
       <body>
         <ReduxProvider>
         {children}
       </ReduxProvider>
         </body>
     </html>
-  );
 }
