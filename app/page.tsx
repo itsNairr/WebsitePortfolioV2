@@ -131,7 +131,7 @@ export default function Home() {
             id="items"
           >
             <div data-aos="fade-right" className="item">
-              Experience
+            <Link href={"/experience"}>Experience</Link>
             </div>
             <div data-aos="fade-right" className="item">
               <Link href={"/skills-projects"}>Skills & Projects</Link>

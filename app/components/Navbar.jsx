@@ -35,7 +35,7 @@ function Navbar() {
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.themeReducer.isDark);
   return (
-    <main
+    <div
       id="nav"
       className="fixed w-full z-50 dark:bg-dark/[1] bg-light/[1] duration-500"
     >
@@ -127,7 +127,7 @@ function Navbar() {
           </div>
         )}
       </div>
-    </main>
+    </div>
   );
 }
 

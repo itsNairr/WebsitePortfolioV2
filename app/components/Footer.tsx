@@ -9,7 +9,7 @@ function Footer() {
   return (
     <>
       <div className="flex flex-col items-center dark:text-white p-10 gap-10 dark:bg-dark bg-light">
-        <div id="items" className="flex flex-row gap-10 text-[30px]">
+        <div id="items" className="flex flex-row flex-wrap gap-10 text-[30px]">
           <a
             className="item"
             href="https://www.linkedin.com/in/hari-nair-0a1627251/"

@@ -1,0 +1,36 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Software and System Integration Specialist",
+        "date": "October 2022 - April 2023",
+        "org": "Queen's AutoDrive Team",
+        "description": ["ROS2 Integration", "Responsible for designing and maintaining system architecture", "Camera & LIDAR Calibrations"],
+        "url": "https://autodrive.engineering.queensu.ca/"
+      },      
+      {
+        "id": 2,
+        "title": "Junior IT Analyst",
+        "date" :"April 2023 - August 2023",
+        "org": "JANA Corporation",
+        "description": ["Assist in project planning by gathering project requirements, creating project timelines, and contributing to the +development of project plans","Review existing security policies and procedures, comparing them to industry best practices and providing recommendations for improvement", "Assist with cloud automation tools to automate routine tasks and streamline cloud operations", "Conducted Tabletop Exercises to improve existing cybersecurity measures"],
+        "url": "https://www.janacorporation.com/"
+      },
+      {
+        "id": 3,
+        "title": "Lead Stack Developer",
+        "date": "September 2023 - Present",
+        "org": "Queen's Vertical Farming Team",
+        "description": ["Leading a group of developers to redesign the design team website", "Redesigned the QVFT website in React, ensuring real-time visualization and updating of farm data", "Employed Flask to execute back-end development responsibilities", "Utilized PostgreSQL to store and manage incoming readings from the I/O sub-system"],
+        "url": "https://www.qvft.ca/"
+      },
+      {
+        "id": 4,
+        "title": "Division of AI Research Member",
+        "date": "September 2023 - Present",
+        "org": "QMIND",
+        "description": ["Design Team of 4-5 people completing a project aimed at expanding the body of academic work surrounding AI and ML"],
+        "url": "https://www.qmind.ca/"
+      }
+    ]
+}

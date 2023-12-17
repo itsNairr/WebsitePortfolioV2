@@ -13,7 +13,7 @@ function NavbarMain() {
   const dispatch = useDispatch();
   const isDark = useSelector((state) => state.themeReducer.isDark);
   return (
-    <main className="fixed w-full z-50 duration-500 xs:dark:bg-dark xs:bg-light">
+    <div className="fixed w-full z-50 duration-500 xs:dark:bg-dark xs:bg-light">
       <div className="dark:text-white px-10 py-7">
         <div className="flex flex-row text-[30px] gap-10 justify-between items-center">
           <Link href={"/"} className="font-bold xs:hidden" data-aos="zoom-in">Hari Nair</Link>
@@ -26,7 +26,7 @@ function NavbarMain() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 

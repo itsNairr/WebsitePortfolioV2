@@ -52,25 +52,10 @@ html::-webkit-scrollbar {
   opacity: 1 !important;
 }
 
-#items:hover > .item {
+#items:hover > .item:not(:hover) {
   transition: opacity 0.5s ease-in-out;
   opacity: 0.3;
 }
-
-#items:hover > .item:hover {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 
 @keyframes rotate {
   0% {
@@ -127,13 +112,4 @@ html::-webkit-scrollbar {
   width: screen;
   z-index: 0;
   pointer-events: none;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }

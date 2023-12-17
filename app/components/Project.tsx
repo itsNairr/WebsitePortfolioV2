@@ -20,7 +20,7 @@ export default function Project(props: any) {
   return (
     <>
       {projectsData.projects.map((project: any) => (
-        <div key={project.id} className="xs:w-full" data-aos="flip-up">
+        <div key={project.id} className="xs:w-full card" data-aos="flip-up">
           <div className="p-5 h-[175px] dark:bg-carddark bg-cardlight rounded-lg flex flex-col justify-between">
             <section>
               <div className="text-[20px] mb-1">{project.title}</div>
