@@ -7,10 +7,10 @@ function page() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     const formValues = {
       name: name,
       email: email,
@@ -24,17 +24,22 @@ function page() {
         formValues,
         process.env.NEXT_PUBLIC_USER_ID!
       );
-      setName(""); 
-      setEmail(""); 
-      setMessage(""); 
-      document.getElementById("success")!.classList.remove("hidden"); 
-      setTimeout(() => { 
-        document.getElementById("success")!.classList.add("hidden"); 
-      }, 5000); 
-    } catch (error) { 
-      document.getElementById("error")!.classList.remove("hidden"); 
-      console.log(error); 
-    } 
+      setName("");
+      setEmail("");
+      setMessage("");
+      document.getElementById("success")!.classList.remove("hidden");
+      setTimeout(() => {
+        document.getElementById("success")!.classList.add("hidden");
+      }, 5000);
+    } catch (error) {
+      document.getElementById("error")!.classList.remove("hidden");
+      console.log(error);
+    }
+
+    // After the email is sent, re-enable the button after a delay
+    setTimeout(() => {
+      setIsSending(false);
+    }, 5000); // 5 seconds delay
   };
 
   return (
@@ -48,7 +53,11 @@ function page() {
         </section>
         <section>
           <form
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault();
+              setIsSending(true);
+              handleSubmit(e);
+            }}
             className="flex flex-col xl:w-[35vw] w-[75vw] gap-5 dark:text-white text-black"
           >
             <input
@@ -83,7 +92,7 @@ function page() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button type="submit">
+            <button type="submit" disabled={isSending}>
               <span
                 data-aos="zoom-in"
                 data-aos-duration="2000"
