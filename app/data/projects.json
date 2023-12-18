@@ -12,7 +12,7 @@
     {
       "id": 2,
       "title": "Portfolio Website V2",
-      "description": "",
+      "description": "The website you are currently on! This is my second portfolio website. Compared to my first portfolio site, I am very proud of how this one turned out. It is built with Next.js and TypeScript, with styling done in Tailwind CSS. I also used Redux to manage the state of the website. I am very happy with how it turned out, and I am excited to continue to improve it.",
       "tags": ["Next.js", "React", "Redux", "TypeScript", "Tailwind"],
       "url": "https://website-portfolio-9bb01.web.app/",
       "github": "https://github.com/itsNairr/WebsitePortfolio"
@@ -40,7 +40,8 @@
       "description": "Conceptual Van Rental website designed with React.js and Firebase, delivering a seamless user experience tailored to connect van owners and renters effortlessly. The platform empowers van owners with a straightforward login and posting system, contributing to a thriving van rental community.",
       "tags": ["Bun.js", "React", "Firebase"],
       "url": "https://main--splendid-youtiao-cbfd1d.netlify.app/",
-      "github": "https://github.com/itsNairr/VanRentalSite"
+      "github": "https://github.com/itsNairr/VanRentalSite",
+      "images": ["v1.png","v2.png"]
     },
     {
       "id": 6,
@@ -52,7 +53,8 @@
       "id": 7,
       "title": "Autonomous Loader Robot",
       "tags": ["Arduino", "Circuits"],
-      "description": "Engineered an autonomous robot that was able to independently traverse a test arena while transporting parts. Leveraging C and Arduino coding, I was able to power the robot with a 5V battery connected to a breadboard, complemented by range sensors and a line follower for navigation. As a result, I was able to create a working prototype that successfully completed its assigned tasks."
+      "description": "Engineered an autonomous robot that was able to independently traverse a test arena while transporting parts using C++, Arduino microcontrollers, and some circuitry. I was able to power the robot with a 5V battery connected to a breadboard, complemented by a LIDAR detector, LEDs, and servo motors. As a result, I was able to create a working prototype that successfully completed its assigned tasks.",
+      "images": ["arobot1.png","arobot2.png"]
     }
   ]
 }

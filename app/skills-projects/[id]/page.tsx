@@ -72,9 +72,9 @@ function page({ params }: any) {
                   <div className="text-[40px] xs:text-[30px] sm:text-[35px] sm: mb-5">
                     {project.title}
                   </div>
-                  <div className="mb-5">
-                    {Array.isArray(project.tags) &&
-                      project.tags.map((tag: string, index: number) => (
+                  {Array.isArray(project.tags) &&
+                    project.tags.map((tag: string, index: number) => (
+                      <div className="mb-5 inline-flex">
                         <span
                           key={index}
                           data-aos="zoom-in"
@@ -83,31 +83,33 @@ function page({ params }: any) {
                         >
                           {tag}
                         </span>
-                      ))}
-                  </div>
-                  <div
-                    id="items"
-                    className="inline-flex flex-row gap-10 text-[20px] items-center mb-5"
-                  >
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="blank"
-                        className="text-[25px] flex flex-row items-center gap-1 font-semibold item"
-                      >
-                        <span className="text-[18px]">Website</span>{" "}
-                        <GoArrowUpRight />
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="blank"
-                        className="flex flex-row items-center gap-2 font-semibold item"
-                      >
-                        Github <FaGithub />
-                      </a>
-                    )}
+                      </div>
+                    ))}
+                  <div>
+                    <div
+                      id="items"
+                      className="inline-flex flex-row gap-10 text-[20px] items-center mb-5"
+                    >
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="blank"
+                          className="text-[25px] flex flex-row items-center gap-1 font-semibold item"
+                        >
+                          <span className="text-[18px]">Website</span>{" "}
+                          <GoArrowUpRight />
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="blank"
+                          className="flex flex-row items-center gap-2 font-semibold item"
+                        >
+                          Github <FaGithub />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <p
@@ -128,7 +130,7 @@ function page({ params }: any) {
                   pagination={{ clickable: true }}
                   // onSwiper={(swiper) => console.log(swiper)}
                   // onSlideChange={() => console.log("slide change")}
-                  className="w-[45%] sm:h-[300px] xs:h-[300px] sm:w-full xs:w-full"
+                  className="w-[45%] h-[450px] sm:h-[300px] xs:h-[350px] sm:w-full xs:w-full"
                 >
                   {Array.isArray(project.images) &&
                     project.images.map((image: string, index: number) => (

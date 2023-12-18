@@ -20,7 +20,7 @@ function Footer() {
           <a className="item" href="https://github.com/itsNairr" target="blank">
             <FaGithub />
           </a>
-          <a className="item" href="mailto:hariknair139@gmail.com">
+          <a className="item" href="./Hari-Nair-Resume-W24.pdf" target="blank">
             <TbFileCv />
           </a>
         </div>

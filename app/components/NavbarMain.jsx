@@ -21,7 +21,7 @@ function NavbarMain() {
           <div id="items" className="flex flex-row gap-10">
             <a className="item" data-aos="zoom-in" href="https://www.linkedin.com/in/hari-nair-0a1627251/" target="blank"><FaLinkedinIn /></a>
             <a className="item" data-aos="zoom-in" href="https://github.com/itsNairr" target="blank"><FaGithub /></a>
-            <a className="item" data-aos="zoom-in" href="mailto:hariknair139@gmail.com"><TbFileCv /></a>
+            <a className="item" data-aos="zoom-in" href="./Hari-Nair-Resume-W24.pdf" target="blank"><TbFileCv /></a>
             <button className="item" data-aos="zoom-in" onClick={() => dispatch(toggleTheme())}>{isDark && <BsMoonStarsFill />}{!isDark && <IoSunny/>}</button>
           </div>
         </div>
