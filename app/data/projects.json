@@ -47,13 +47,13 @@
       "id": 6,
       "title": "Robotic Assistive Arm Prototype",
       "tags": ["Arduino", "SOLIDWORKS"],
-      "description": "In my first year course, APSC-101, me and three others were formed in a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything together, a final, functioning protype will be created."
+      "description": "In my first-year course, APSC-101, me and three others formed a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, a high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything, a final, functioning prototype was created."
     },
     {
       "id": 7,
       "title": "Autonomous Loader Robot",
       "tags": ["Arduino", "Robotics"],
-      "description": "Engineered an autonomous robot that was able to independently traverse a test arena while transporting parts using C++, Arduino, and some circuitry. I was able to power the robot with a 5V battery connected to a breadboard, complemented by a LIDAR detector, LEDs, and servo motors. As a result, I was able to create a working prototype that successfully completed its assigned tasks.",
+      "description": "Programmed an autonomous line follower robot that was able to independently traverse a test arena while picking up and transporting plastic wire caps using a scoop. The project included the use of Arduino in C++. The robot moved using 2 servo motors while the scoop was powered by a separate servo. A LIDAR detector was used to find walls and indicate when to turn. 2 photoresistors were responsible for line following. As a result, I was able to create a working prototype that completed its assigned tasks.",
       "images": ["arobot1.png","arobot2.png"]
     }
   ]
