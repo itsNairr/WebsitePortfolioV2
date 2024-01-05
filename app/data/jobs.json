@@ -27,10 +27,26 @@
       {
         "id": 4,
         "title": "Division of AI Research Member",
-        "date": "September 2023 - Present",
+        "date": "September 2023 - January 2024",
         "org": "QMIND",
         "description": ["Design Team of 4-5 people completing a project aimed at expanding the body of academic work surrounding AI and ML"],
         "url": "https://www.qmind.ca/"
+      }
+      {
+        "id": 5,
+        "title": "Teaching Assistant",
+        "date": "January 2024 - Present",
+        "org": "Queen's University",
+        "description": ["TA for APSC 142 (Introduction to Programming for Engineers) for the C programming language.", "Supervised and assisted roughly 200 students in in-class assignments during weekly lab sessions."],
+        "url": "https://www.queensu.ca/academic-calendar/search/?P=APSC%20142"
+      }
+      {
+        "id": 6,
+        "title": "Software Development Lead",
+        "date": "January 2024 - Present",
+        "org": "Evstry",
+        "description": ["Evstry is Canada's cash gift registry platform helping hosts create events, track RSVPs and accept cash gifts digitally."],
+        "url": "https://www.evstry.com/"
       }
     ]
 }
