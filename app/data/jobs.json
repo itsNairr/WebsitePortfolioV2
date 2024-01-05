@@ -31,7 +31,7 @@
         "org": "QMIND",
         "description": ["Design Team of 4-5 people completing a project aimed at expanding the body of academic work surrounding AI and ML"],
         "url": "https://www.qmind.ca/"
-      }
+      },
       {
         "id": 5,
         "title": "Teaching Assistant",
@@ -39,7 +39,7 @@
         "org": "Queen's University",
         "description": ["TA for APSC 142 (Introduction to Programming for Engineers) for the C programming language.", "Supervised and assisted roughly 200 students in in-class assignments during weekly lab sessions."],
         "url": "https://www.queensu.ca/academic-calendar/search/?P=APSC%20142"
-      }
+      },
       {
         "id": 6,
         "title": "Software Development Lead",
