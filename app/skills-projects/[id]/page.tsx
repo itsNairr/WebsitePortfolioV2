@@ -63,7 +63,7 @@ function page({ params }: any) {
       {project && (
         <>
           <div className="">
-            <div className="flex flex-row p-10 xs:p-7 xs:px-3 mt-10 dark:bg-carddark bg-cardlight rounded-lg w-[80vw] flex-wrap">
+            <div className="flex flex-row p-10 xs:p-7 mt-10 dark:bg-carddark bg-cardlight rounded-lg w-[80vw] xs:w-[90vw] flex-wrap">
               <section
                 className={`flex flex-col mb-5 ${
                   project.images ? "w-[50%]" : "w-[100%]"
