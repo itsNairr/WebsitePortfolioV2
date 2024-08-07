@@ -30,6 +30,7 @@ type ProjectType = {
   tags: string[];
   github: string;
   url: string;
+  paper: string;
   images: string[];
 };
 
@@ -40,7 +41,7 @@ function page({ params }: any) {
   useEffect(() => {
     const foundProject = projectsData.projects.find(
       (project) => project.id == id
-    ) as ProjectType;
+    ) as ProjectType | undefined;
     if (!foundProject) {
       router.push("/skills-projects");
     } else {
@@ -69,7 +70,7 @@ function page({ params }: any) {
                 } sm:w-full xs:w-full`}
               >
                 <div>
-                  <div className="text-[40px] xs:text-[30px] sm:text-[35px] sm: mb-5">
+                  <div className="text-[40px] xs:text-[30px] sm:text-[35px] mb-5">
                     {project.title}
                   </div>
                   {Array.isArray(project.tags) &&
@@ -109,6 +110,16 @@ function page({ params }: any) {
                           Github <FaGithub />
                         </a>
                       )}
+                      {project.paper && (
+                        <a
+                          href={project.paper}
+                          target="blank"
+                          className="text-[25px] flex flex-row items-center gap-1 font-semibold item"
+                        >
+                          <span className="text-[18px]">Research</span>{" "}
+                          <GoArrowUpRight />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -121,6 +132,7 @@ function page({ params }: any) {
                 </p>
               </section>
               {project.images && (
+                <>
                 <Swiper
                   modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                   spaceBetween={50}
@@ -130,7 +142,7 @@ function page({ params }: any) {
                   pagination={{ clickable: true }}
                   // onSwiper={(swiper) => console.log(swiper)}
                   // onSlideChange={() => console.log("slide change")}
-                  className="w-[45%] h-[450px] sm:h-[300px] xs:h-[350px] sm:w-full xs:w-full"
+                  className="w-[45%] h-auto sm:h-[300px] xs:h-[350px] sm:w-full xs:w-full"
                 >
                   {Array.isArray(project.images) &&
                     project.images.map((image: string, index: number) => (
@@ -148,6 +160,7 @@ function page({ params }: any) {
                       </SwiperSlide>
                     ))}
                 </Swiper>
+                </>
               )}
             </div>
           </div>

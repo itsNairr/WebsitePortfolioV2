@@ -13,6 +13,7 @@ type ProjectType = {
   description: string;
   tags: string[];
   github: string;
+  paper: string;
   url: string;
 };
 

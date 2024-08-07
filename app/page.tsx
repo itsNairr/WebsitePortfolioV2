@@ -36,7 +36,7 @@ export default function Home() {
     }
 
     const titles = [
-      "mechatronics engineer",
+      "mechatronics engineering student",
       "software developer",
       "machine learning enthusiast",
       "tech nerd :)",

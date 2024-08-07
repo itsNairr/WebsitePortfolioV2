@@ -12,29 +12,31 @@ function page(prop: any) {
         >
           <Image
             alt=""
-            src="/harinobg.png"
-            width={450}
-            height={450}
+            src="/hari.jpg"
+            width={500}
+            height={500}
             className="rounded-[10%] pfp"
           />
         </div>
-        <h1 className="text-[40px] font-bold mb-5">About Me</h1>
-        <p className="text-lg mx-[10vw] text-center" data-aos="zoom-in">
-          Currently in my second year of <b>Mechatronics and Robotics Engineering</b> at <b>Queen's University</b>, 
-          I am a student from Barrie, Ontario,
-          driven by a passion for robotics, software development, and artificial
-          intelligence. My academic and personal endeavors are focused on the
-          practical application of these disciplines to create solutions for
-          real-world challenges. I am dedicated to staying at the forefront of
-          technological innovation and constantly expand my knowledge within the
-          field. Outside of my academic interests, I engage with the financial
-          world through stock trading as a hobby and explore my creative side by
-          playing guitar. As I continue to develop my expertise, I am actively
-          seeking a 4-month internship in the summer of 2024, where I can
-          contribute to and learn from a dynamic team. I am eager to apply my
-          skills in a practical setting and make meaningful contributions to the
-          field of engineering.
-        </p>
+        <h1 className="text-[40px] font-bold mb-10">About Me</h1>
+        <div className="flex flex-row justify-evenly w-screen flex-wrap">
+          <div className="flex flex-col w-[40%] text-lg xs:w-full xs:text-base mb-5 xs:p-5">
+            <h1 className="text-[40px] font-bold xs:text-[30px] sm:text-[35px] mb-5">Education</h1>
+            <h2 className="font-bold" >Queen's University</h2>
+            <h3>BASc Mechatronics & Robotics Engineering</h3>
+            <h3 className="mb-5">Graduation Year: 2026</h3>
+            <h2 className="font-semibold" >Relevent Coursework</h2>
+            <h3 className="mb-5">Data Structures and Algorithms, Computer Architecture, Digital Systems, Mechatronics Design, Linear Algebra, Signals and Systems</h3>
+            <h2 className="font-semibold" >Clubs and Societies</h2>
+            <h3><span className="underline">Co-founder and Vice-President:</span> Queen's University Malayalee Association</h3>
+            <h3><span className="underline">Communications Coordinator:</span> Queen's Mechatronics and Robotics Discipline Club</h3>
+          </div>
+          <div className="w-[2px] bg-white sm:hidden xs:hidden"></div>
+          <div className="flex flex-col w-[40%] text-lg xs:w-full xs:p-5 xs:text-base">
+          <h1 className="text-[40px] font-bold xs:text-[30px] sm:text-[35px] mb-5">Internships & Employment</h1>
+          <p>As I will be finishing my third year of university in the spring of 2025, I am actively seeking for <strong>8 - 16 month internship opportunities</strong> that will allow me to apply my academic knowledge and further develop my skills in engineering. With a strong foundation in programming and robotics, I am eager to contribute to a dynamic team and gain practical experience in the software and mechatronics industry.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

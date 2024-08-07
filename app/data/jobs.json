@@ -1,15 +1,7 @@
 {
-    "jobs": [
+    "jobs": [  
       {
         "id": 1,
-        "title": "Software and System Integration Specialist",
-        "date": "October 2022 - April 2023",
-        "org": "Queen's AutoDrive Team",
-        "description": ["ROS2 Integration", "Responsible for designing and maintaining system architecture", "Camera & LIDAR Calibrations"],
-        "url": "https://autodrive.engineering.queensu.ca/"
-      },      
-      {
-        "id": 2,
         "title": "Junior IT Analyst",
         "date" :"April 2023 - August 2023",
         "org": "JANA Corporation",
@@ -17,7 +9,7 @@
         "url": "https://www.janacorporation.com/"
       },
       {
-        "id": 3,
+        "id": 2,
         "title": "Lead Stack Developer",
         "date": "September 2023 - Present",
         "org": "Queen's Vertical Farming Team",
@@ -25,28 +17,36 @@
         "url": "https://www.qvft.ca/"
       },
       {
-        "id": 4,
-        "title": "Division of AI Research Member",
-        "date": "September 2023 - January 2024",
-        "org": "QMIND",
-        "description": ["Design Team of 4-5 people completing a project aimed at expanding the body of academic work surrounding AI and ML"],
-        "url": "https://www.qmind.ca/"
-      },
-      {
-        "id": 5,
-        "title": "Teaching Assistant",
-        "date": "January 2024 - Present",
+        "id": 3,
+        "title": "Undergraduate Teaching Assistant",
+        "date": "January 2024 - April 2024",
         "org": "Queen's University",
-        "description": ["TA for APSC 142 (Introduction to Programming for Engineers) for the C programming language.", "Supervised and assisted roughly 200 students in in-class assignments during weekly lab sessions."],
+        "description": ["Educated and mentored as a TA for APSC 142, focusing on the C programming language.", "Directed and supervised approx. 200 students through hands-on assignments during weekly lab sessions and office hours."],
         "url": "https://www.queensu.ca/academic-calendar/search/?P=APSC%20142"
       },
       {
-        "id": 6,
+        "id": 4,
         "title": "Software Development Lead",
-        "date": "January 2024 - Present",
+        "date": "January 2024 - August 2024",
         "org": "Evstry",
-        "description": ["Evstry is Canada's cash gift registry platform helping hosts create events, track RSVPs and accept cash gifts digitally."],
+        "description": ["Created the Evstry website connecting CMS, Figma, Webflow, and React, achieving a 30% boost in consumer engagement.", "Guided a 5-man Agile Team software interns, accelerating task completion in less time expected."],
         "url": "https://www.evstry.com/"
+      },
+      {
+        "id": 5,
+        "title": "Machine Learning Developer",
+        "date": "January 2024 - Present",
+        "org": "GM-SAE AutoDrive Challenge II",
+        "description": ["Engineered a sensor-fusion model using C++ and OpenCV, enhancing performance 25-fold.", "Created a script with OpenAI API to convert datasets to Microsoft VoTT format.", "Represented Queen's University at the GM-SAE AutoDrive Challenge II Winter Workshop in Michigan."],
+        "url": "https://autodrive.engineering.queensu.ca/"
+      },
+      {
+        "id": 6,
+        "title": "AI & Technology Intern",
+        "date": "May 2024 - August 2024",
+        "org": "City of Orillia",
+        "description": ["Implemented an AI HelpDesk Bot categorizing IT tickets, trained on 6000+ tickets.", "Authored and presented Generative AI guidelines to City Council; received approval and completed within 90 days.", "Consulted with 5 city-wide businesses, upgrading equipment and optimizing processes."],
+        "url": "https://www.orillia.ca/en/index.aspx"
       }
     ]
 }
