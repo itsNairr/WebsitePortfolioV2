@@ -46,19 +46,19 @@
     {
       "id": 6,
       "title": "Robotic Assistive Arm Prototype",
-      "tags": ["Arduino", "SOLIDWORKS"],
+      "tags": ["Arduino", "SOLIDWORKS", "C++"],
       "description": "In my first-year course, APSC-101, me and three others formed a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, a high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything, a final, functioning prototype was created."
     },
     {
       "id": 7,
       "title": "Line-Following Loader Robot",
-      "tags": ["Arduino", "Robotics"],
+      "tags": ["Arduino", "C++"],
       "description": "Programmed an autonomous line follower robot that was able to independently traverse a test arena while picking up and transporting plastic wire caps using a scoop. The project included the use of Arduino in C++. The robot moved using 2 servo motors while the scoop was powered by a separate servo. A LIDAR detector was used to find walls and indicate when to turn. 2 photoresistors were responsible for line following. As a result, I was able to create a working prototype that completed its assigned tasks.",
       "images": ["arobot1.png","arobot2.png"]
     },
     {
       "id": 8,
-      "title": "Autonomous Mobile Robot",
+      "title": "Emergency Response Mobile Robot",
       "tags": ["Python", "C++", "ROS2"],
       "description": "I led a team of fellow students to develop a prototype autonomous emergency response robot as part of a semester long project, utilizing ROS2, Arduino, Python, and C++. We applied what we learned in our courses to equip the robot with a thermal camera for heat spot detection, making it highly effective in emergency situations. To enhance its efficiency and safety, we incorporated LiDAR-based obstacle avoidance and a PID controller, directly applying theoretical knowledge to practical challenges. Additionally, we designed the mounts and system architecture using SOLIDWORKS and Miro. This project allowed us to bring together classroom concepts and real-world applications in a meaningful way.",
       "images": ["amr1.jpg","amr2.jpg","amr3.jpg"],
@@ -75,9 +75,9 @@
     },
     {
       "id": 10,
-      "title": "Autonomous Mobile Robot V2",
-      "tags": ["Flask", "React", "Keras"],
-      "description": "During the summer of 2024, I expanded on V1 to create Autonomous Robot V2. This enhanced version includes the implementation of Simultaneous Localization and Mapping (SLAM) using Nav2, further advancing the robot's navigational capabilities. By integrating SLAM, the robot now possesses an improved ability to map and navigate complex environments autonomously, solidifying its potential as a critical tool in emergency response scenarios. In addition, I plan to attach a camera to the robot and implement object detection using OpenCV to follow a user around an area.",
+      "title": "SLAM Autonomous Mobile Robot V2",
+      "tags": ["Python", "ROS2", "Arduino"],
+      "description": "During the summer of 2024, I revamped Emergency Response Mobile Robot to create SLAM Autonomous Robot V2. This enhanced version includes the implementation of Simultaneous Localization and Mapping (SLAM) using Nav2, further advancing the robot's navigational capabilities. By integrating SLAM, the robot now possesses an improved ability to map and navigate complex environments autonomously, solidifying its potential as a critical tool in emergency response scenarios. In addition, I plan to attach a camera to the robot and implement object detection using OpenCV to follow a user around an area.",
       "images": ["rv2.jpg"],
       "github": "https://github.com/itsNairr/Robot"
     }
