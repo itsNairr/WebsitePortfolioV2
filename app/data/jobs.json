@@ -35,7 +35,7 @@
       {
         "id": 5,
         "title": "Machine Learning Developer",
-        "date": "January 2024 - Present",
+        "date": "January 2024 - September 2024",
         "org": "GM-SAE AutoDrive Challenge II",
         "description": ["Engineered a sensor-fusion model using C++ and OpenCV, enhancing performance 25-fold.", "Created a script with OpenAI API to convert datasets to Microsoft VoTT format.", "Represented Queen's University at the GM-SAE AutoDrive Challenge II Winter Workshop in Michigan."],
         "url": "https://autodrive.engineering.queensu.ca/"
@@ -47,6 +47,23 @@
         "org": "City of Orillia",
         "description": ["Implemented an AI HelpDesk Bot categorizing IT tickets, trained on 6000+ tickets.", "Authored and presented Generative AI guidelines to City Council; received approval and completed within 90 days.", "Consulted with 5 city-wide businesses, upgrading equipment and optimizing processes."],
         "url": "https://www.orillia.ca/en/index.aspx"
+      },
+      {
+        "id": 7,
+        "title": "Lane Detection Lead",
+        "date": "September 2024 - April 2025",
+        "org": "GM-SAE AutoDrive Challenge II",
+        "description": ["Led the Lane Detection team, developing advanced computer vision algorithms for an autonomous Chevy Bolt.", "Improved road segmentation accuracy by implementing a custom-trained YOLO11 Segmentation Model, optimized with PyTorch and CUDA acceleration.", "Directed the development of a bird’s-eye view transformed detection system"],
+        "url": "https://autodrive.engineering.queensu.ca/"
+      },
+      {
+        "id": 8,
+        "title": "Trade Floor Technology Consultant",
+        "date": "May 2025 - Present",
+        "org": "Scotiabank",
+        "description": ["16 Month PEY Internship"],
+        "url": "https://www.gbm.scotiabank.com/en.html"
       }
+
     ]
 }

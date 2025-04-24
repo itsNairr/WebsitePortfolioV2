@@ -15,7 +15,7 @@
       "description": "The website you are currently on! This is my second portfolio website. Compared to my first portfolio site, I am very proud of how this one turned out. It is built with Next.js and TypeScript, with styling done in Tailwind CSS. I also used Redux to manage the state of the website. I am very happy with how it turned out, and I am excited to continue to improve it.",
       "tags": ["Next.js", "React", "Redux", "TypeScript", "Tailwind"],
       "url": "https://website-portfolio-9bb01.web.app/",
-      "github": "https://github.com/itsNairr/WebsitePortfolio"
+      "github": "https://github.com/itsNairr/WebsitePortfolioV2"
     },
     {
       "id": 3,
@@ -80,6 +80,15 @@
       "description": "During the summer of 2024, I revamped Emergency Response Mobile Robot to create SLAM Autonomous Robot V2. This enhanced version includes the implementation of Simultaneous Localization and Mapping (SLAM) using Nav2, further advancing the robot's navigational capabilities. By integrating SLAM, the robot now possesses an improved ability to map and navigate complex environments autonomously, solidifying its potential as a critical tool in emergency response scenarios. In addition, I plan to attach a camera to the robot and implement object detection using OpenCV to follow a user around an area.",
       "images": ["rv2.jpg"],
       "github": "https://github.com/itsNairr/Robot"
+    },
+    {
+      "id": 11,
+      "title": "TreatTowers: Autonomous Pet Feeder",
+      "tags": ["Next.js", "YOLO", "Arduino", "OpenCV", "Flask"],
+      "description": "I designed and built a sleek, smart autonomous cat feeder that dispenses kibble only when a cat of a specified breed is detected using a custom-trained YOLO model. I used an Arduino paired with an ESP8266 for real-time servo control and developed a Python backend server using Flask to manage serial communication and computer vision tasks. To enable seamless interaction between systems, I created a REST API to connect the backend to a user-friendly frontend developed in Next.js. This interface allows pet owners to schedule feeding times based on the day and time of the week. I incorporated a camera module and OpenCV to support live detection, ensuring accurate and efficient feeding. Additionally, I implemented remote monitoring features by sending real-time status updates to the pet owner's mobile device. ",
+      "images": ["cf1.jpg", "cf2.jpg"],
+      "github": "https://github.com/itsNairr/AutomatedPetFeeder"
     }
+    
   ]
 }
