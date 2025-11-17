@@ -6,7 +6,6 @@ import animationDataLight from "./lotties/scroll-down-light.json";
 import animationDataDark from "./lotties/scroll-down-dark.json";
 import { useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
 
@@ -15,11 +14,13 @@ export default function Home() {
   const isDark = useSelector((state: any) => state.themeReducer.isDark);
   const [greeting, setGreeting] = useState("Hello,");
   useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+      AOS.refresh();
     });
-    AOS.refresh();
     const date = new Date();
     const hour = date.getHours();
     if (hour >= 0 && hour < 12) {
