@@ -9,14 +9,6 @@
         "url": "https://www.janacorporation.com/"
       },
       {
-        "id": 2,
-        "title": "Lead Stack Developer",
-        "date": "September 2023 - Present",
-        "org": "Queen's Vertical Farming Team",
-        "description": ["Leading a group of developers to redesign the design team website", "Redesigned the QVFT website in React, ensuring real-time visualization and updating of farm data", "Employed Flask to execute back-end development responsibilities", "Utilized PostgreSQL to store and manage incoming readings from the I/O sub-system"],
-        "url": "https://www.qvft.ca/"
-      },
-      {
         "id": 3,
         "title": "Undergraduate Teaching Assistant",
         "date": "January 2024 - April 2024",
@@ -29,16 +21,8 @@
         "title": "Software Development Lead",
         "date": "January 2024 - August 2024",
         "org": "Evstry",
-        "description": ["Created the Evstry website connecting CMS, Figma, Webflow, and React, achieving a 30% boost in consumer engagement.", "Guided a 5-man Agile Team software interns, accelerating task completion in less time expected."],
+        "description": ["Created the Evstry website connecting CMS, Figma, Webflow, and React, achieving a 60% boost in consumer engagement.", "Guided a 5-man Agile Team software interns, accelerating task completion in less time expected."],
         "url": "https://www.evstry.com/"
-      },
-      {
-        "id": 5,
-        "title": "Machine Learning Developer",
-        "date": "January 2024 - September 2024",
-        "org": "GM-SAE AutoDrive Challenge II",
-        "description": ["Engineered a sensor-fusion model using C++ and OpenCV, enhancing performance 25-fold.", "Created a script with OpenAI API to convert datasets to Microsoft VoTT format.", "Represented Queen's University at the GM-SAE AutoDrive Challenge II Winter Workshop in Michigan."],
-        "url": "https://autodrive.engineering.queensu.ca/"
       },
       {
         "id": 6,
@@ -50,20 +34,17 @@
       },
       {
         "id": 7,
-        "title": "Lane Detection Lead",
-        "date": "September 2024 - April 2025",
-        "org": "GM-SAE AutoDrive Challenge II",
-        "description": ["Led the Lane Detection team, developing advanced computer vision algorithms for an autonomous Chevy Bolt.", "Improved road segmentation accuracy by implementing a custom-trained YOLO11 Segmentation Model, optimized with PyTorch and CUDA acceleration.", "Directed the development of a bird’s-eye view transformed detection system"],
-        "url": "https://autodrive.engineering.queensu.ca/"
-      },
-      {
-        "id": 8,
-        "title": "Trade Floor Technology Consultant",
+        "title": "Trade Floor Technology Consultant (Full Stack Developer)",
         "date": "May 2025 - Present",
-        "org": "Scotiabank",
-        "description": ["16 Month PEY Internship"],
+        "org": "Scotiabank - Global Banking and Markets",
+        "description": ["Engineered and deployed an asset management portal using Vue.js, Tailwind CSS, ASP.NET, and MS SQL Server to query relationships between 13,000+ users and trade floor assets.",
+        "Automated asset data retrieval by eliminating manual lookups and saving over 100 hrs annually for internal support teams.",
+        "Revolutionized IT support workflows by building a .NET Maui Blazor-Selenium desktop app to automate over 100+ ServiceNow tasks including ticket creation and department onboarding.",
+        "Slashed manual ServiceNow process time by 91% (from 2 minutes to 10 seconds), freeing the support teams from repetitive data entry to focus on high-priority incidents.",
+        "Led the front-end for an internal networking/coffee chat app from solely designing the UI in Figma to leading development with Vue.js and Tailwind CSS for a 500+ user base.",
+        "Mentored 2 junior interns and managed the team's workflow by conducting regular code reviews and PR approvals.",
+        "Spearheaded the 2026 intern recruitment process as a hiring coordinator, from phone screening 100+ applications to conducting 25+ technical interviews to select a cohort of 6 interns."],
         "url": "https://www.gbm.scotiabank.com/en.html"
       }
-
     ]
 }

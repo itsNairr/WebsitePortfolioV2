@@ -37,7 +37,7 @@ type ProjectType = {
 function page({ params }: any) {
   const [project, setProject] = useState<ProjectType>();
   const router = useRouter();
-  const { id } = params;
+  const { id } = React.use(params);
   useEffect(() => {
     const foundProject = projectsData.projects.find(
       (project) => project.id == id
@@ -75,9 +75,8 @@ function page({ params }: any) {
                   </div>
                   {Array.isArray(project.tags) &&
                     project.tags.map((tag: string, index: number) => (
-                      <div className="mb-5 inline-flex">
+                      <div key={index} className="mb-5 inline-flex">
                         <span
-                          key={index}
                           data-aos="zoom-in"
                           data-aos-delay={(index + 1) * 400}
                           className="p-2 mr-5 text-[15px] xs:text-[12px] xs:mr-3 dark:bg-zinc-700 bg-zinc-300 rounded-full"

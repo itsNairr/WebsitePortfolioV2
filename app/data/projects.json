@@ -88,6 +88,14 @@
       "description": "I designed and built a sleek, smart autonomous cat feeder that dispenses kibble only when a cat of a specified breed is detected using a custom-trained YOLO model. I used an Arduino paired with an ESP8266 for real-time servo control and developed a Python backend server using Flask to manage serial communication and computer vision tasks. To enable seamless interaction between systems, I created a REST API to connect the backend to a user-friendly frontend developed in Next.js. This interface allows pet owners to schedule feeding times based on the day and time of the week. I incorporated a camera module and OpenCV to support live detection, ensuring accurate and efficient feeding. Additionally, I implemented remote monitoring features by sending real-time status updates to the pet owner's mobile device. ",
       "images": ["cf1.jpg", "cf2.jpg"],
       "github": "https://github.com/itsNairr/AutomatedPetFeeder"
+    },
+    {
+      "id": 12,
+      "title": "Lane Segmentation for Autonomous Navigation",
+      "tags": ["Python", "YOLO", "OpenCV", "Roboflow", "ROS2", "OpenAI"],
+      "description": "I was the project lead for developing the lane detection module for an autonomous vehicle as part of the GM-SAE AutoDrive Challenge II. I trained a custom YOLOv11 segmentation model using Roboflow to accurately identify and segment lane markings from a front-facing camera feed. The model was trained on over 50,000 images that were labeled from countless 'annotation nights'. I personally audited these annotations of 30+ contributors to ensure dataset integrity. I also oversaw a bird's-eye view transformation to enhance lane detection accuracy and developed algorithms to calculate the vehicle's position relative to the lane center, providing essential data for navigation and control systems. The completed lane detection model acheived a mean Average Precision (mAP50) of 83%, significantly contributing to the state estimator and path planning performance of the autonomous vehicle.",
+      "images": ["ls1.png","ls2.png","ls3.png"],
+      "github": "https://github.com/itsNairr/lane_detection_pkg"
     }
     
   ]
