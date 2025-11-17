@@ -34,7 +34,7 @@ type ProjectType = {
   images: string[];
 };
 
-function page({ params }: any) {
+function page({ params }: { params: Promise<{ id: number }> }) {
   const [project, setProject] = useState<ProjectType>();
   const router = useRouter();
   const { id } = React.use(params);
