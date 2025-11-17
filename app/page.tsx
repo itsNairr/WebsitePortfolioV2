@@ -1,6 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import Lottie from "lottie-react";
 import Link from "next/link";
 import animationDataLight from "./lotties/scroll-down-light.json";
 import animationDataDark from "./lotties/scroll-down-dark.json";
@@ -9,10 +9,6 @@ import { useEffect, useMemo, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
-
-const Lottie = dynamic(() => import("react-lottie"), {
-  ssr: false,
-});
 
 
 export default function Home() {
@@ -87,19 +83,9 @@ export default function Home() {
         console.error(error);
       }
     };
+    
     writeLoop();
   }, []);
-
-const defaultOptions = useMemo(() => {
-  return {
-    loop: true,
-    autoplay: true,
-    animationData: isDark ? animationDataLight : animationDataDark,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-}, [isDark, animationDataLight, animationDataDark]);
 
   function handleScroll() {
     const element = document.getElementById("navscreen");
@@ -121,12 +107,11 @@ const defaultOptions = useMemo(() => {
                 <span id="cursor">|</span>
               </div>
             </div>
-            <div onClick={handleScroll} className="absolute bottom-[5%]">
+            <div onClick={handleScroll} className="absolute bottom-[5%] cursor-pointer">
               <Lottie
-                options={defaultOptions}
-                height={50}
-                width={50}
-                isClickToPauseDisabled={true} // Disable click to pause
+                animationData={isDark ? animationDataLight : animationDataDark}
+                loop={true}
+                style={{ width: 50, height: 50 }}
               />
             </div>
           </div>
