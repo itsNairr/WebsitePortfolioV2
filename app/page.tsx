@@ -2,8 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import animationDataLight from "../app/lotties/scroll-down-light.json";
-import animationDataDark from "../app/lotties/scroll-down-dark.json";
+import animationDataLight from "./lotties/scroll-down-light.json";
+import animationDataDark from "./lotties/scroll-down-dark.json";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import AOS from "aos";
