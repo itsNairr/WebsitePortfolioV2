@@ -5,7 +5,7 @@ import Link from "next/link";
 import animationDataLight from "./lotties/scroll-down-light.json";
 import animationDataDark from "./lotties/scroll-down-dark.json";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
@@ -13,6 +13,7 @@ import NavbarMain from "./components/NavbarMain";
 const Lottie = dynamic(() => import("react-lottie"), {
   ssr: false,
 });
+
 
 export default function Home() {
   const isDark = useSelector((state: any) => state.themeReducer.isDark);
@@ -89,7 +90,8 @@ export default function Home() {
     writeLoop();
   }, []);
 
-  const defaultOptions = {
+const defaultOptions = useMemo(() => {
+  return {
     loop: true,
     autoplay: true,
     animationData: isDark ? animationDataLight : animationDataDark,
@@ -97,6 +99,7 @@ export default function Home() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+}, [isDark, animationDataLight, animationDataDark]);
 
   function handleScroll() {
     const element = document.getElementById("navscreen");
