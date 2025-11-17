@@ -7,20 +7,10 @@ import Link from "next/link";
 import { toggleTheme } from "../redux/features/themeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import "./navbar.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function Navbar() {
   const [tog, setToggle] = useState(false);
   const checkBoxRef = useRef(null);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-    AOS.refresh();
-  } , []);
 
   useEffect(() => {
     if (checkBoxRef.current) {
