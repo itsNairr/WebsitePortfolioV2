@@ -1,6 +1,6 @@
 "use client";
 
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import animationDataLight from "./lotties/scroll-down-light.json";
 import animationDataDark from "./lotties/scroll-down-dark.json";
@@ -9,6 +9,9 @@ import { useEffect, useMemo, useState } from "react";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
 
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false, 
+});
 
 export default function Home() {
   const isDark = useSelector((state: any) => state.themeReducer.isDark);
