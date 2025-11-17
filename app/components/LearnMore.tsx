@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { TbFileCv } from "react-icons/tb";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 

@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import jobsData from "../data/jobs.json";
 import "./timeline.css";
 import { GoArrowUpRight } from "react-icons/go";

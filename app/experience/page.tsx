@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import TimelineComponent from "../components/TimelineComponent";
 
 function page(prop: any) {
