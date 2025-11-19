@@ -7,22 +7,22 @@ import { FaArrowRight } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
 import Link from "next/link";
 
-type ProjectType = {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  github: string;
-  paper: string;
-  url: string;
-};
-
 export default function Project(props: any) {
+  const handleOnMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Set the CSS variables directly on the element
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+  };
   return (
     <>
       {projectsData.projects.map((project: any) => (
-        <div key={project.id} className="xs:w-full card" data-aos="flip-up" data-aos-delay = {screen.width > 575 ? project.id * 250 : 0 }>
-          <div className="p-5 h-[175px] dark:bg-carddark bg-cardlight rounded-lg flex flex-col justify-between">
+        <div key={project.id} className="xs:w-full card relative rounded-lg overflow-hidden dark:bg-carddark bg-cardlight" data-aos="flip-up" data-aos-delay={screen.width > 575 ? project.id * 250 : 0} onMouseMove={handleOnMouseMove}>
+          <div className="p-5 h-[175px] flex flex-col justify-between relative z-10">
             <section>
               <div className="text-[20px] mb-1">{project.title}</div>
               <div className="flex flex-row gap-1">

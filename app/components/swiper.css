@@ -1,0 +1,19 @@
+.dark .swiper-pagination-bullet {
+    background: #a7a7a7;;
+  }
+  
+.swiper-pagination-bullet-active {
+    background: #000;
+  }
+
+  .dark .swiper-pagination-bullet-active {
+    background: #ffffff;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    color: #000000; /* Change this to your desired color */
+  }
+  
+  .dark .swiper-button-next, .dark .swiper-button-prev {
+    color: #fff;
+  }
