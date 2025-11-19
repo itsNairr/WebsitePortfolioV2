@@ -32,8 +32,8 @@ function page(prop: any) {
           </div>
           <div className="w-[2px] bg-white sm:hidden xs:hidden"></div>
           <div className="flex flex-col w-[40%] text-lg xs:w-full xs:p-5 xs:text-base" data-aos="fade-left">
-          <h1 className="text-[40px] font-bold xs:text-[30px] sm:text-[35px] mb-5">Internships & Employment</h1>
-          <p>As of May 2025, I am working at <strong> Scotiabank: Global Banking and Markets</strong> as a Trade Floor Technology Consultant for the next 16 months as part of my Professional Placement (QUIP).</p>
+            <h1 className="text-[40px] font-bold xs:text-[30px] sm:text-[35px] mb-5">Internships & Employment</h1>
+            <p>As of May 2025, I am working at <strong> Scotiabank: Global Banking and Markets</strong> as a Trade Floor Technology Consultant (Full Stack Developer) as part of my Professional Placement (QUIP).</p>
           </div>
         </div>
       </div>

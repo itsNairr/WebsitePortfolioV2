@@ -32,7 +32,7 @@ function TimelineComponent() {
                 <h2 className="text-[17px]">{job.org}</h2>
                 <h3 className="xs:text-[14px]">{job.date}</h3>
               </div>
-              <div className="xs:hidden">
+              <div className="xs:hidden ml-5">
                 {Array.isArray(job.description) &&
                   job.description.map((point: string, index: number) => (
                     <li key={index}>{point}</li>
