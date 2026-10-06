@@ -39,7 +39,7 @@ export default function ProjectView({ project }: { project: ProjectType }) {
             <div className="">
                 <div className="flex flex-row p-10 xs:p-7 mt-10 dark:bg-carddark bg-cardlight rounded-lg w-[80vw] xs:w-[90vw] flex-wrap">
                     <section
-                        className={`flex flex-col mb-5 ${project.images ? "w-[50%]" : "w-[100%]"
+                        className={`flex flex-col mb-5 ${project.images ? "w-[50%]" : "w-full"
                             } sm:w-full xs:w-full`}
                     >
                         <div>

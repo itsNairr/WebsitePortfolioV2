@@ -9,7 +9,7 @@ import { useEffect, useMemo, useState } from "react";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
 
-const Lottie = dynamic(() => import("lottie-react"), {
+const Lottie = dynamic(() => import("lottie-react").then((m) => m.Lottie), {
   ssr: false, 
 });
 
@@ -113,7 +113,8 @@ export default function Home() {
             </div>
             <div onClick={handleScroll} className="absolute bottom-[5%] cursor-pointer">
               <Lottie
-                animationData={isDark ? animationDataLight : animationDataDark}
+                src={isDark ? animationDataLight : animationDataDark}
+                autoplay
                 loop={true}
                 style={{ width: 50, height: 50 }}
               />

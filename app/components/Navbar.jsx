@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <div
       id="nav"
-      className="fixed w-full z-50 dark:bg-dark/[1] bg-light/[1] duration-500"
+      className="fixed w-full z-50 dark:bg-dark bg-light duration-500"
     >
       <div className="dark:text-white px-10 py-7">
         <div className="flex flex-row text-[30px] gap-10 justify-between items-center">

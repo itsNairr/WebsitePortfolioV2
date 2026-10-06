@@ -13,7 +13,7 @@ import {
   SiCplusplus,
   SiPython,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiNodedotjs,
   SiPandas,
   SiNumpy,
@@ -25,14 +25,14 @@ import {
   SiVuedotjs,
   SiBlazor,
   SiDotnet,
-  SiCsharp,
   SiDart,
   SiRos,
   SiOpencv,
   SiJira,
-  SiMicrosoftsqlserver,
   SiConfluence,
 } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
 
 function page(prop: any) {
   return (
@@ -50,9 +50,9 @@ function page(prop: any) {
           <SiCplusplus data-aos="zoom-in" className="iconshadow" />{" "}
           <SiPython data-aos="zoom-in" className="iconshadow" />{" "}
           <SiHtml5 data-aos="zoom-in" className="iconshadow" />{" "}
-          <SiCss3 data-aos="zoom-in" className="iconshadow" />{" "}
+          <SiCss data-aos="zoom-in" className="iconshadow" />{" "}
           <SiDart data-aos="zoom-in" className="iconshadow" />{" "}
-          <SiCsharp data-aos="zoom-in" className="iconshadow" />
+          <TbBrandCSharp data-aos="zoom-in" className="iconshadow" />
         </div>
         <h1 className="text-[30px] my-5">Frameworks & Libraries</h1>
         <div className="flex flex-row flex-wrap text-[60px] sm:text-[50px] xs:text-[40px] gap-[50px] justify-evenly w-[90%]">
@@ -73,7 +73,7 @@ function page(prop: any) {
         <div className="flex flex-row flex-wrap text-[60px] sm:text-[50px] xs:text-[40px] gap-[50px] justify-evenly w-[90%]">
           {" "}
           <SiMongodb data-aos="zoom-in" className="iconshadow" />
-          <SiMicrosoftsqlserver data-aos="zoom-in" className="iconshadow" />
+          <DiMsqlServer data-aos="zoom-in" className="iconshadow" />
           <SiJira data-aos="zoom-in" className="iconshadow" />
           <SiBun data-aos="zoom-in" className="iconshadow" />
           <SiConfluence data-aos="zoom-in" className="iconshadow" />
