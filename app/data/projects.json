@@ -3,100 +3,191 @@
     {
       "id": 1,
       "title": "Store Website: Spice Mart",
-      "description": "I developed a customer-centric website that allows patrons to browse menu options and discover current promotions with ease. The site boasts a responsive front end, built Next.js and Tailwind CSS. At its core, a dynamic RESTful API built with Next.js Server enables staff to effortlessly manage menu updates, while the integration of Auth0 ensures secure administrator access for content control. Additionally, MongoDB Atlas underpins the system as the robust database solution, streamlining the management of menu data for an optimized user experience.",
-      "tags": ["Next.js", "Tailwind", "React", "MongoDB"],
+      "description": "Together with Joel Kayyalakam, I designed and developed the official website for Spice Mart, a South Indian take-out and grocery store in Barrie, Ontario. Customers can browse menu options and discover current promotions on a responsive front end built with Next.js and Tailwind CSS. Behind it, a RESTful API built with Next.js lets staff manage menu updates themselves, Auth0 secures administrator access, and MongoDB Atlas stores the menu data.",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "React",
+        "MongoDB"
+      ],
       "url": "https://spicemartbarrie.ca/",
       "github": "https://github.com/itsNairr/SpiceMart",
-      "images": ["spicemart.png","spicemart-menu.png","spicemart-portal.png","spicemart-edit.png"]
-    },
-    {
-      "id": 2,
-      "title": "Portfolio Website V2",
-      "description": "The website you are currently on! This is my second portfolio website. Compared to my first portfolio site, I am very proud of how this one turned out. It is built with Next.js and TypeScript, with styling done in Tailwind CSS. I also used Redux to manage the state of the website. I am very happy with how it turned out, and I am excited to continue to improve it.",
-      "tags": ["Next.js", "React", "Redux", "TypeScript", "Tailwind"],
-      "url": "https://website-portfolio-9bb01.web.app/",
-      "github": "https://github.com/itsNairr/WebsitePortfolioV2"
+      "images": [
+        "spicemart.png",
+        "spicemart-menu.png",
+        "spicemart-portal.png",
+        "spicemart-edit.png"
+      ]
     },
     {
       "id": 3,
       "title": "Portfolio Website V1",
       "description": "One of my first projects, this is my old portfolio website. It is built with React and JavaScript with styling done in vanilla CSS. It is crazy to see how much I have improved since then, but I am still proud of this project as it was my first time using React.js.",
-      "tags": ["React", "JavaScript", "HTML", "CSS"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
       "url": "https://website-portfolio-9bb01.web.app/",
       "github": "https://github.com/itsNairr/WebsitePortfolio",
-      "images": ["hn1.png","hn2.png","hn3.png"]
+      "images": [
+        "hn1.png",
+        "hn2.png",
+        "hn3.png"
+      ]
     },
     {
       "id": 4,
       "title": "Maze Generator and Solver",
-      "description": "Utilized the recursive backtracking algorithm to design and develop a Maze Generator and Solver in C++, incorporating heuristics to identify the most efficient path to successfully traverse the maze. Applied stacks and graph-like structures to enable optimal coding and debugging. Displayed and rendered graphics using the Raylib library.",
-      "tags": ["C/C++", "Raylib"],
+      "description": "My final project for Data Structures and Algorithms: a maze generator and solver written in C++, with graphics rendered in Raylib. Mazes are carved and then solved using a recursive backtracking algorithm, with graphs, stacks, arrays, and hashing used to track visited cells and trace a path from start to finish.",
+      "tags": [
+        "C/C++",
+        "Raylib"
+      ],
       "github": "https://github.com/itsNairr/Maze-Solver-Generator",
-      "images": ["maze.png"]
-    },
-    {
-      "id": 5,
-      "title": "Concept Website - Van Rental Site",
-      "description": "Conceptual Van Rental website designed with React.js and Firebase, delivering a seamless user experience tailored to connect van owners and renters effortlessly. The platform empowers van owners with a straightforward login and posting system, contributing to a thriving van rental community.",
-      "tags": ["Bun.js", "React", "Firebase"],
-      "url": "https://main--splendid-youtiao-cbfd1d.netlify.app/",
-      "github": "https://github.com/itsNairr/VanRentalSite",
-      "images": ["v1.png","v2.png"]
+      "images": [
+        "maze.png"
+      ]
     },
     {
       "id": 6,
       "title": "Robotic Assistive Arm Prototype",
-      "tags": ["Arduino", "SOLIDWORKS", "C++"],
-      "description": "In my first-year course, APSC-101, me and three others formed a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, a high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything, a final, functioning prototype was created."
+      "tags": [
+        "Arduino",
+        "SOLIDWORKS",
+        "C++"
+      ],
+      "description": "In my first-year course, APSC-101, me and three others formed a group to create a working robotic assistive arm that functioned to lift various objects for those who had disabilities. The project included various implications such as complex problem solving, a high degree of mathematical modeling, precise CAD designing, and Arduino coding and wiring. Combining everything, a final, functioning prototype was created.",
+      "images": [
+        "arm1.png"
+      ]
     },
     {
       "id": 7,
       "title": "Line-Following Loader Robot",
-      "tags": ["Arduino", "C++"],
+      "tags": [
+        "Arduino",
+        "C++"
+      ],
       "description": "Programmed an autonomous line follower robot that was able to independently traverse a test arena while picking up and transporting plastic wire caps using a scoop. The project included the use of Arduino in C++. The robot moved using 2 servo motors while the scoop was powered by a separate servo. A LIDAR detector was used to find walls and indicate when to turn. 2 photoresistors were responsible for line following. As a result, I was able to create a working prototype that completed its assigned tasks.",
-      "images": ["arobot1.png","arobot2.png"]
+      "images": [
+        "arobot1.png",
+        "arobot2.png"
+      ]
     },
     {
       "id": 8,
       "title": "Emergency Response Mobile Robot",
-      "tags": ["Python", "C++", "ROS2"],
+      "tags": [
+        "Python",
+        "C++",
+        "ROS2"
+      ],
       "description": "I led a team of fellow students to develop a prototype autonomous emergency response robot as part of a semester long project, utilizing ROS2, Arduino, Python, and C++. We applied what we learned in our courses to equip the robot with a thermal camera for heat spot detection, making it highly effective in emergency situations. To enhance its efficiency and safety, we incorporated LiDAR-based obstacle avoidance and a PID controller, directly applying theoretical knowledge to practical challenges. Additionally, we designed the mounts and system architecture using SOLIDWORKS and Miro. This project allowed us to bring together classroom concepts and real-world applications in a meaningful way.",
-      "images": ["amr1.jpg","amr2.jpg","amr3.jpg"],
+      "images": [
+        "amr1.jpg",
+        "amr2.jpg",
+        "amr3.jpg"
+      ],
       "github": "https://github.com/itsNairr/MobileRobot"
     },
     {
       "id": 9,
       "title": "Image Captioning Model Comparison",
-      "tags": ["Flask", "React", "Keras"],
+      "tags": [
+        "Flask",
+        "React",
+        "Keras"
+      ],
       "description": "As a member of an Agile team of six, I contributed to the development and comparison of four lightweight encoder-decoder models for image captioning using Keras. We employed a modified pretrained VGG16 convolutional neural network to extract image features from the Flickr8k dataset. Throughout this process, I gained significant knowledge and skills in deep learning, model optimization, and teamwork. To showcase our work, I created an interactive website with a React.js frontend and Flask backend, demonstrating the models and their bidirectional variants at the Canadian Undergraduate Conference on AI (CUCAI). Additionally, I co-authored and published a research paper for CUCAI, presenting an in-depth analysis of our experiment's findings. This project was a tremendous learning experience, enhancing my technical expertise and collaborative abilities.",
-      "images": ["im1.png","im2.png","im3.jpg"],
+      "images": [
+        "im1.png",
+        "im2.png",
+        "im3.jpg"
+      ],
       "github": "https://github.com/itsNairr/ModelComparison",
       "paper": "http://harinair.ca/From_Recurrent_Neural_Networks_to_Transformers__Comparing_AI_Models_for_Image_Captioning.pdf"
     },
     {
-      "id": 10,
-      "title": "SLAM Autonomous Mobile Robot V2",
-      "tags": ["Python", "ROS2", "Arduino"],
-      "description": "During the summer of 2024, I revamped Emergency Response Mobile Robot to create SLAM Autonomous Robot V2. This enhanced version includes the implementation of Simultaneous Localization and Mapping (SLAM) using Nav2, further advancing the robot's navigational capabilities. By integrating SLAM, the robot now possesses an improved ability to map and navigate complex environments autonomously, solidifying its potential as a critical tool in emergency response scenarios. In addition, I plan to attach a camera to the robot and implement object detection using OpenCV to follow a user around an area.",
-      "images": ["rv2.jpg"],
-      "github": "https://github.com/itsNairr/Robot"
-    },
-    {
       "id": 11,
       "title": "TreatTowers: Autonomous Pet Feeder",
-      "tags": ["Next.js", "YOLO", "Arduino", "OpenCV", "Flask"],
-      "description": "I designed and built a sleek, smart autonomous cat feeder that dispenses kibble only when a cat of a specified breed is detected using a custom-trained YOLO model. I used an Arduino paired with an ESP8266 for real-time servo control and developed a Python backend server using Flask to manage serial communication and computer vision tasks. To enable seamless interaction between systems, I created a REST API to connect the backend to a user-friendly frontend developed in Next.js. This interface allows pet owners to schedule feeding times based on the day and time of the week. I incorporated a camera module and OpenCV to support live detection, ensuring accurate and efficient feeding. Additionally, I implemented remote monitoring features by sending real-time status updates to the pet owner's mobile device. ",
-      "images": ["cf1.jpg", "cf2.jpg"],
+      "tags": [
+        "Next.js",
+        "YOLO",
+        "Arduino",
+        "OpenCV",
+        "Flask"
+      ],
+      "description": "A smart cat feeder that dispenses kibble only when it recognizes the right cat. An Arduino captures camera images and streams them over serial to a Python Flask server, which runs a custom-trained YOLO model to identify the cat's breed and match it to that cat's feeding schedule. When a feeding is allowed, the server sends a request to the Wi-Fi-connected Arduino, which turns a stepper motor and opens a servo gate to dispense a set amount of kibble, with an ultrasonic sensor on board. Pet owners manage their cats and weekly feeding schedules from a Next.js dashboard backed by the Flask REST API, including live schedule status.",
+      "images": [
+        "cf1.jpg",
+        "cf2.jpg"
+      ],
       "github": "https://github.com/itsNairr/AutomatedPetFeeder"
     },
     {
       "id": 12,
       "title": "Lane Segmentation for Autonomous Navigation",
-      "tags": ["Python", "YOLO", "OpenCV", "Roboflow", "ROS2", "OpenAI"],
-      "description": "I was the project lead for developing the lane detection module for an autonomous vehicle as part of the GM-SAE AutoDrive Challenge II. I trained a custom YOLOv11 segmentation model using Roboflow to accurately identify and segment lane markings from a front-facing camera feed. The model was trained on over 50,000 images that were labeled from countless 'annotation nights'. I personally audited these annotations of 30+ contributors to ensure dataset integrity. I also oversaw a bird's-eye view transformation to enhance lane detection accuracy and developed algorithms to calculate the vehicle's position relative to the lane center, providing essential data for navigation and control systems. The completed lane detection model acheived a mean Average Precision (mAP50) of 83%, significantly contributing to the state estimator and path planning performance of the autonomous vehicle.",
-      "images": ["ls1.png","ls2.png","ls3.png"],
-      "github": "https://github.com/itsNairr/lane_detection_pkg"
+      "tags": [
+        "Python",
+        "PyTorch",
+        "YOLO",
+        "OpenCV",
+        "Roboflow",
+        "ROS2"
+      ],
+      "description": "As project lead for the lane detection module of an autonomous vehicle in the GM-SAE AutoDrive Challenge II, I trained a custom YOLOv11 segmentation model in PyTorch on an NVIDIA Blackwell GPU cluster, reaching 83% mAP50 with under 25ms inference latency. The model learned from 50,000+ images labeled over many 'annotation nights', and I audited the annotations of 30+ contributors to keep the dataset consistent. I also wrote a Python automation script using NumPy, Pandas, and the OpenAI API to convert industry datasets into standardized YOLO format, saving 40+ hours of manual conversion, and oversaw a bird's-eye view transformation and the algorithms that calculate the vehicle's position relative to the lane center for the navigation stack.",
+      "images": [
+        "ls1.png",
+        "ls2.png",
+        "ls3.png"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "PromptVideo: AI Timeline Copilot",
+      "description": "A browser-based video editor you control by describing the edit. Google Gemini 3.5 Flash Lite translates prompts like \"split at 4.2s and cut the dead air\" or \"zoom in 25% on the speaker\" into deterministic edits on a multi-track Remotion timeline, and follow-ups like \"make it bigger\" update existing elements instead of creating duplicates. The editor includes stackable video, text, and zoom tracks, razor splitting, drag-and-trim, on-frame text dragging with magnetic snapping, multi-clip stitching, and a fully client-side MP4 export with pixel-for-pixel parity to the live preview.",
+      "tags": [
+        "Next.js",
+        "Remotion",
+        "Gemini",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "github": "https://github.com/itsNairr/Remotion-AI-Video-Editor",
+      "images": [
+        "promptvideo-copilot.png",
+        "promptvideo-overview.png",
+        "promptvideo-overlay.png",
+        "promptvideo-export.png",
+        "promptvideo-zoom.png"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "EV Fleet Telemetry Engine",
+      "description": "A telemetry backend in Go for electric vehicle fleets, currently in development. A TCP gateway accepts concurrent vehicle connections, decodes length-prefixed Protocol Buffers messages, tracks each vehicle in a session registry by VIN, and fans telemetry out to a pool of worker goroutines over a buffered channel. A companion simulator spins up any number of virtual Tesla and Rivian vehicles running scenarios like driving, charging, towing, and off-roading, streaming GPS, battery, and drivetrain data to stress-test the gateway, with graceful shutdown on both ends.",
+      "tags": [
+        "Go",
+        "Protocol Buffers",
+        "TCP",
+        "Concurrency"
+      ],
+      "github": "https://github.com/itsNairr/CarFleetMissionControl",
+      "featured": true
+    },
+    {
+      "id": 15,
+      "title": "JevTerm: Natural Language Smart Terminal",
+      "description": "A natural-language terminal for Windows that turns plain-English requests into PowerShell commands. Instead of generating commands token by token, it uses TypeSafe Jev 1.13 decisions through OpenRouter to route each request to one of 22,000+ pre-tested templates from tldr-pages and native cmdlets, reaching a sub-500ms median latency at $0.042 per 1M tokens. Every command passes a layered safety pipeline: a zero-model regex blocklist that vetoes destructive commands in under a millisecond, an AI safety audit for medium- and high-risk actions, and tiered confirmation gates before execution, with an append-only audit log of everything that runs.",
+      "tags": [
+        "Python",
+        "PowerShell",
+        "OpenRouter",
+        "LLM Routing"
+      ],
+      "github": "https://github.com/itsNairr/JevTerm"
     }
-    
   ]
 }

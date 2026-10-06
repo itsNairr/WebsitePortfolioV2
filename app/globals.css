@@ -21,6 +21,8 @@
 }
 
 html {
+  /* Page colour before the app mounts, matching the light/dark tokens */
+  background: rgb(255 255 255);
   scroll-behavior: smooth;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -33,76 +35,9 @@ html::-webkit-scrollbar {
 }
 /* page.tsx */
 
-.dark .pfp {
-  -webkit-box-shadow: 0px 10px 50px -15px rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 15px 16px -15px rgba(255, 255, 255, 0.3);
-}
-
-.pfp {
-  -webkit-box-shadow: 0px 10px 50px -15px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 15px 16px -15px rgba(0, 0, 0, 0.3);
-}
-
 #items:hover > .item:not(:hover) {
   transition: opacity 0.5s ease-in-out;
   opacity: 0.3;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.gradient {
-  --size: 150px;
-  --speed: 5s;
-  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
-  width: var(--size);
-  height: var(--size);
-  filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(hsl(158, 82%, 57%, 0.85), hsl(252, 82%, 57%));
-  animation: rotate var(--speed) var(--easing) alternate infinite;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-@media (min-width: 1120px) {
-  .gradient {
-    --size: 500px;
-  }
-}
-
-@media (min-width: 1020px) {
-  .gradient {
-    --size: 450px;
-  }
-}
-
-@media (min-width: 920px) {
-  .gradient {
-    --size: 400px;
-  }
-}
-
-.container {
-  opacity: 0.5;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 15%;
-  right: 0%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: all 0.25s ease-out;
-  width: screen;
-  z-index: 0;
-  pointer-events: none;
 }
 
 /* Home page background blobs */
@@ -122,7 +57,6 @@ html::-webkit-scrollbar {
   filter: blur(calc(var(--size) / 5));
   background-image: linear-gradient(var(--from), var(--to));
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  animation: rotate var(--speed) cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
 }
 
 @keyframes float {
@@ -143,4 +77,224 @@ html::-webkit-scrollbar {
   50% {
     opacity: 1;
   }
+}
+
+/* Scroll-driven fade/slide-in for cards; unsupported browsers just show everything */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+  }
+}
+
+/* Translucent cards: semi-transparent fill, gentle blur, hairline border and a
+   soft shadow. In the components layer so Tailwind utilities can still override it. */
+@layer components {
+  .liquid-glass {
+    background: rgb(255 255 255 / 0.55);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(15 23 42 / 0.06);
+    box-shadow: 0 4px 20px rgb(15 23 42 / 0.06);
+    /* Tailwind's hover:-translate-y-* sets `translate`, so it must be transitioned too */
+    transition:
+      translate 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dark .liquid-glass {
+    background: rgb(255 255 255 / 0.05);
+    border-color: rgb(255 255 255 / 0.08);
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.3);
+  }
+
+  .liquid-glass-hover:hover {
+    border-color: rgb(15 23 42 / 0.1);
+    box-shadow: 0 12px 32px rgb(15 23 42 / 0.12);
+  }
+
+  .dark .liquid-glass-hover:hover {
+    border-color: rgb(255 255 255 / 0.14);
+    box-shadow: 0 14px 36px rgb(0 0 0 / 0.45);
+  }
+
+  /* Fields match the translucent cards, with a sky-blue focus ring */
+  .liquid-field {
+    background: rgb(255 255 255 / 0.55);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgb(15 23 42 / 0.06);
+    box-shadow: 0 4px 20px rgb(15 23 42 / 0.06);
+    outline: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .dark .liquid-field {
+    background: rgb(255 255 255 / 0.05);
+    border-color: rgb(255 255 255 / 0.08);
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.3);
+  }
+
+  .liquid-field::placeholder {
+    color: currentColor;
+    opacity: 0.5;
+  }
+
+  .liquid-field:focus {
+    border-color: rgb(56 189 248 / 0.6);
+    box-shadow: 0 0 0 3px rgb(56 189 248 / 0.2);
+  }
+}
+
+/* Paint the fixed galaxy layers once on their own GPU layer; otherwise Chrome can
+   show stale patches of the blurred background over cards while scrolling. */
+.galaxy-layer {
+  transform: translateZ(0);
+  will-change: transform;
+  contain: strict;
+}
+
+/* Phones and tablets: a live backdrop blur behind every card is expensive to
+   repaint while scrolling, so use a slightly more solid fill instead. */
+@media (max-width: 897px) {
+  .liquid-glass,
+  .liquid-field {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgb(255 255 255 / 0.75);
+  }
+
+  .dark .liquid-glass,
+  .dark .liquid-field {
+    background: rgb(30 30 34 / 0.7);
+  }
+}
+
+/* Cross-fade for the project detail gallery */
+@keyframes gallery-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Thin, theme-matched scrollbar for the gallery thumbnail strip. Chrome ignores the
+   ::-webkit-scrollbar styles below once scrollbar-width is set, so only Firefox gets it. */
+@supports not selector(::-webkit-scrollbar) {
+  .thumb-strip {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0 0 0 / 0.2) transparent;
+  }
+
+  .dark .thumb-strip {
+    scrollbar-color: rgb(255 255 255 / 0.2) transparent;
+  }
+}
+
+.thumb-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumb-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thumb-strip::-webkit-scrollbar-button {
+  display: none;
+}
+
+.thumb-strip::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgb(0 0 0 / 0.2);
+}
+
+.dark .thumb-strip::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.2);
+}
+
+/* Custom cursors: arrow by default, pointing hand over anything clickable.
+   The plain url() is the fallback; image-set() serves the @2x art on high-res screens. */
+html {
+  cursor: url("/cursors/arrow.png") 2 2, auto;
+  cursor: image-set(url("/cursors/arrow.png") 1x, url("/cursors/arrow@2x.png") 2x) 2 2, auto;
+}
+
+a,
+button,
+[role="button"],
+summary,
+select,
+label[for],
+.cursor-pointer {
+  cursor: url("/cursors/hand.png") 9 1, pointer;
+  cursor: image-set(url("/cursors/hand.png") 1x, url("/cursors/hand@2x.png") 2x) 9 1, pointer;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: text;
+}
+
+/* Colourful glow that follows the cursor across any card. CardGlow.tsx sets
+   --glow-x / --glow-y on the card under the pointer. */
+.liquid-glass {
+  position: relative;
+}
+
+.liquid-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: radial-gradient(
+    420px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgb(56 189 248 / 0.12),
+    rgb(139 92 246 / 0.08) 35%,
+    rgb(236 72 153 / 0.04) 55%,
+    transparent 70%
+  );
+}
+
+.dark .liquid-glass::after {
+  background: radial-gradient(
+    420px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgb(56 189 248 / 0.16),
+    rgb(139 92 246 / 0.1) 35%,
+    rgb(236 72 153 / 0.06) 55%,
+    transparent 70%
+  );
+}
+
+@media (hover: hover) {
+  .liquid-glass:hover::after {
+    opacity: 1;
+  }
+}
+
+html.dark {
+  background: rgb(20 20 20);
 }

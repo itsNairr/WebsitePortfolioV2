@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Experience",
-  description: "Hari Nair's technical experience across banking, municipal government, startups and academia.",
+  title: "Projects",
+  description: "Software, AI and robotics projects by Hari Nair.",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {

@@ -1,99 +1,77 @@
 .timeline {
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  .dark .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    background: white
-  }
+  --node: 56px;
+  --pad: 20px;
+  padding-inline: var(--pad);
+}
 
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    background: black
+@media (max-width: 575px) {
+  .timeline {
+    --node: 44px;
+    --pad: 16px;
   }
+}
 
-  .timeline-item.left {
-    padding-right: 50px; /* Increase this value to increase the gap on the left side */
-  }
-  
-  .timeline-item.right {
-    padding-left: 50px; /* Increase this value to increase the gap on the right side */
-    left: 50%;
-  }
+/* Vertical rail through the centre of the logo column */
+.timeline-rail,
+.timeline-fill {
+  position: absolute;
+  top: calc(var(--node) / 2);
+  bottom: 0;
+  left: calc(var(--pad) + var(--node) / 2 - 1px);
+  width: 2px;
+  border-radius: 9999px;
+}
 
-  @media (max-width: 575px) {
-    .timeline::before {
-      z-index: 0;
+/* The full rainbow is always faintly visible; the fill brightens it as you scroll */
+.timeline-rail,
+.timeline-fill {
+  background: linear-gradient(to bottom, #38bdf8, #8b5cf6, #ec4899, #f97316);
+}
+
+.timeline-rail {
+  opacity: 0.25;
+}
+
+/* How far down the fill reaches, 0–1. Registered so it can animate smoothly;
+   defaults past 1 so the line is fully lit when scroll animations aren't supported. */
+@property --fill {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 2;
+}
+
+/* The fill's leading edge fades out over 160px instead of cutting off hard */
+.timeline-fill {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--fill) * 100% - 160px),
+    transparent calc(var(--fill) * 100%)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 calc(var(--fill) * 100% - 160px),
+    transparent calc(var(--fill) * 100%)
+  );
+  filter: drop-shadow(0 0 6px rgb(139 92 246 / 0.6));
+}
+
+@keyframes timeline-grow {
+  from {
+    --fill: 0;
+  }
+  to {
+    --fill: 1.2;
+  }
+}
+
+/* Scroll-driven animations; unsupported browsers just show everything */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    /* Fill tracks the middle of the viewport as it moves through the timeline */
+    .timeline-fill {
+      animation: timeline-grow linear both;
+      animation-timeline: view();
+      animation-range: cover 50vh cover calc(100% - 50vh);
     }
-    .timeline-item::after {
-      display: none;
-    }
-    .timeline-item.left::after {
-      right: 0;
-      top: 0;
-    }
-    .timeline-item.right::after {
-      left: 0;
-      top: 0;
-    }
-    .timeline-item.right, .timeline-item.left {
-      display: flex;
-      position: static;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      text-align: center;
-    }
   }
-
-
-  .timeline-item {
-    position: relative;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    width: 50%;
-  }
-  
-  .dark .timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: white
-  }
-
-  .timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: black
-  }
-  
-  .timeline-item.left::after {
-    right: -10px;
-    top: 50%;
-  }
-  
-  .timeline-item.right::after {
-    left: -10px;
-    top: 50%;
-  }
+}

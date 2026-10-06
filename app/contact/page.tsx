@@ -2,68 +2,52 @@
 
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import GalaxyBackground from "../components/GalaxyBackground";
+
+type Status = "idle" | "sending" | "sent" | "error";
+
+const fieldClass = "liquid-field text-[20px] p-3 rounded-2xl";
 
 function page() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formValues = {
-      name: name,
-      email: email,
-      message: message,
-    };
-
+    setStatus("sending");
     try {
       await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID!,
         process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-        formValues,
+        { name, email, message },
         process.env.NEXT_PUBLIC_USER_ID!
       );
       setName("");
       setEmail("");
       setMessage("");
-      document.getElementById("success")!.classList.remove("hidden");
-      setTimeout(() => {
-        document.getElementById("success")!.classList.add("hidden");
-      }, 5000);
+      setStatus("sent");
     } catch (error) {
-      document.getElementById("error")!.classList.remove("hidden");
       console.log(error);
+      setStatus("error");
     }
-
-    // After the email is sent, re-enable the button after a delay
-    setTimeout(() => {
-      setIsSending(false);
-    }, 5000); // 5 seconds delay
   };
 
   return (
     <>
-      <main className="min-h-screen max-h-full pt-[120px] pb-[100px] w-full flex flex-row flex-wrap items-center justify-evenly">
-        <section
-          data-aos="fade-in"
-          className="xl:text-[60px] mx-5 text-[35px] xs:text-[25px] xl:text-left text-center font-bold xl:w-[50vw] mb-10"
-        >
+      <GalaxyBackground subtle />
+      <main className="relative z-10 min-h-screen max-h-full pt-[120px] pb-[100px] w-full flex flex-row flex-wrap items-center justify-evenly">
+        <section className="xl:text-[60px] mx-5 text-[35px] xs:text-[25px] xl:text-left text-center font-bold xl:w-[50vw] mb-10">
           Thank you for stopping by. I would love to get in touch with you.
         </section>
         <section>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setIsSending(true);
-              handleSubmit(e);
-            }}
+            onSubmit={handleSubmit}
             className="flex flex-col xl:w-[35vw] w-[75vw] gap-5 dark:text-white text-black"
           >
             <input
-              data-aos-duration="2000"
-              data-aos="zoom-in"
-              className="text-[20px] p-3 dark:bg-carddark bg-cardlight rounded-lg"
+              className={fieldClass}
               type="text"
               name="name"
               placeholder="Name"
@@ -72,9 +56,7 @@ function page() {
               onChange={(e) => setName(e.target.value)}
             />
             <input
-              data-aos-duration="2000"
-              data-aos="zoom-in"
-              className="text-[20px] p-3 dark:bg-carddark bg-cardlight rounded-lg"
+              className={fieldClass}
               type="email"
               name="email"
               placeholder="Email"
@@ -83,42 +65,29 @@ function page() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
-              data-aos-duration="2000"
-              data-aos="zoom-in"
-              className="text-[20px] p-3 h-[200px] dark:bg-carddark bg-cardlight rounded-lg"
+              className={`${fieldClass} h-[200px] resize-none`}
               name="message"
               placeholder="Message"
               required
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            <button type="submit" disabled={isSending}>
-              <span
-                data-aos="zoom-in"
-                data-aos-duration="2000"
-                className="text-[20px] font-bold"
-              >
-                Send
-              </span>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="text-[20px] font-bold disabled:opacity-60"
+            >
+              {status === "sending" ? "Sending..." : "Send"}
             </button>
-            <span
-              id="success"
-              className="hidden text-[20px] font-bold text-center text-green-500"
-            >
-              Sent Successfully!
-            </span>
-            <span
-              id="error"
-              className="hidden text-[20px] font-bold text-center text-red-500"
-            >
-              Something went wrong. Try again later.
-            </span>
+            <div aria-live="polite" className="text-[20px] font-bold text-center">
+              {status === "sent" && <span className="text-green-500">Sent Successfully!</span>}
+              {status === "error" && (
+                <span className="text-red-500">Something went wrong. Try again later.</span>
+              )}
+            </div>
           </form>
         </section>
       </main>
-      <div className="container">
-        <div className="gradient"></div>
-      </div>
     </>
   );
 }

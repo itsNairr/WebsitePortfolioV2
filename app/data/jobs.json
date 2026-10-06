@@ -1,50 +1,71 @@
 {
-    "jobs": [  
+    "jobs": [
       {
         "id": 1,
-        "title": "Junior IT Analyst",
-        "date" :"April 2023 - August 2023",
+        "title": "Analyst Intern",
+        "date": "May 2023 - August 2023",
         "org": "JANA Corporation",
-        "description": ["Assist in project planning by gathering project requirements, creating project timelines, and contributing to the development of project plans","Review existing security policies and procedures, comparing them to industry best practices and providing recommendations for improvement", "Assist with cloud automation tools to automate routine tasks and streamline cloud operations", "Conducted Tabletop Exercises to improve existing cybersecurity measures"],
-        "url": "https://www.janacorporation.com/"
+        "description": [
+          "Accelerated project delivery cycles by **10% through Agile/Scrum** sprint planning and backlog grooming",
+          "Standardized project tracking across **12+ Jira/Confluence pages**, eliminating delivery bottlenecks"
+        ],
+        "url": "https://www.janacorporation.com/",
+        "logo": "/logos/jana.png",
+        "tags": ["Agile/Scrum", "Jira", "Confluence"]
       },
       {
         "id": 3,
-        "title": "Undergraduate Teaching Assistant",
-        "date": "January 2024 - April 2024",
+        "title": "Teaching Assistant",
+        "date": "January 2024 - May 2024",
         "org": "Queen's University",
-        "description": ["Educated and mentored as a TA for APSC 142, focusing on the C programming language.", "Directed and supervised approx. 200 students through hands-on assignments during weekly lab sessions and office hours."],
-        "url": "https://www.queensu.ca/academic-calendar/search/?P=APSC%20142"
+        "description": [
+          "Guided **800+ engineering students** through C programming (APSC 142), leading weekly labs and grading problem sets."
+        ],
+        "url": "https://www.queensu.ca/academic-calendar/search/?P=APSC%20142",
+        "logo": "/logos/queens.png",
+        "tags": ["C", "Teaching"]
       },
       {
         "id": 4,
-        "title": "Software Development Lead",
-        "date": "January 2024 - August 2024",
+        "title": "Software Developer Intern",
+        "date": "January 2024 - May 2024",
         "org": "Evstry",
-        "description": ["Created the Evstry website connecting CMS, Figma, Webflow, and React, achieving a 60% boost in consumer engagement.", "Guided a 5-man Agile Team software interns, accelerating task completion in less time expected."],
-        "url": "https://www.evstry.com/"
+        "description": [
+          "Eliminated vendor lock-in, **saving $200/month,** migrating legacy Webflow infrastructure to a Next.js and Tailwind CSS app.",
+          "Grew organic search impressions **60% to 1,000+ monthly visits** via Google Search Console audits and SEO fixes."
+        ],
+        "url": "https://www.evstry.com/",
+        "logo": "/logos/evstry.png",
+        "tags": ["Next.js", "Tailwind CSS", "Webflow", "SEO", "Google Search Console"]
       },
       {
         "id": 6,
         "title": "AI & Technology Intern",
         "date": "May 2024 - August 2024",
         "org": "City of Orillia",
-        "description": ["Implemented an AI HelpDesk Bot categorizing IT tickets, trained on 6000+ tickets.", "Authored and presented Generative AI guidelines to City Council; received approval and completed within 90 days.", "Consulted with 5 city-wide businesses, upgrading equipment and optimizing processes."],
-        "url": "https://www.orillia.ca/en/index.aspx"
+        "description": [
+          "Achieved **80% multi-class categorization** accuracy across **6,000+ support tickets** by developing a classification pipeline in PyTorch to automate IT ticket tagging and routing",
+          "Authored the city's **inaugural Generative AI Policy**, securing unanimous City Council adoption within a **90-day timeline**."
+        ],
+        "url": "https://www.orillia.ca/en/index.aspx",
+        "logo": "/logos/orillia.png",
+        "tags": ["PyTorch", "Machine Learning", "Generative AI"]
       },
       {
         "id": 7,
-        "title": "Trade Floor Technology Consultant (Full Stack Developer)",
+        "title": "Full-Stack Engineer Intern",
         "date": "May 2025 - Present",
-        "org": "Scotiabank - Global Banking and Markets",
-        "description": ["Engineered and deployed an asset management portal using Vue.js, Tailwind CSS, ASP.NET, and MS SQL Server to query relationships between 13,000+ users and trade floor assets.",
-        "Automated asset data retrieval by eliminating manual lookups and saving over 100 hrs annually for internal support teams.",
-        "Revolutionized IT support workflows by building a .NET Maui Blazor-Selenium desktop app to automate over 100+ ServiceNow tasks including ticket creation and department onboarding.",
-        "Slashed manual ServiceNow process time by 91% (from 2 minutes to 10 seconds), freeing the support teams from repetitive data entry to focus on high-priority incidents.",
-        "Led the front-end for an internal networking/coffee chat app from solely designing the UI in Figma to leading development with Vue.js and Tailwind CSS for a 500+ user base.",
-        "Mentored 2 junior interns and managed the team's workflow by conducting regular code reviews and PR approvals.",
-        "Spearheaded the 2026 intern recruitment process as a hiring coordinator, from phone screening 100+ applications to conducting 25+ technical interviews to select a cohort of 6 interns."],
-        "url": "https://www.gbm.scotiabank.com/en.html"
+        "org": "Scotiabank",
+        "description": [
+          "Saved **100+ hours annually** by replacing manual lookups across **13,000+ assets** with a **Vue.js and ASP.NET Core** application backed by **Microsoft SQL Server** and a responsive user interface",
+          "Slashed manual **ticket fill-out time 91%** by automating **100+ ServiceNow tasks** across ticket creation and departmental onboarding with a **.NET desktop app**.",
+          "Placed **top-3 in the 2025 ScotiaTank innovation challenge**, scaling an enterprise networking platform to **500+ users** by architecting **.NET** backend services, designing **GraphQL schemas**, and building a responsive Vue.js front-end.",
+          "Mitigated market-open trading disruptions across **3 trading floors** by engineering a concurrent **Python audit scanner** that polls across **15+ subnets** and flags non-compliant assets for early IT triage.",
+          "Accelerated deployments **10x faster** and eliminated manual server interventions by building **GitHub Actions CI/CD** pipelines with automated test gates across Dev, UAT, and Production."
+        ],
+        "url": "https://www.gbm.scotiabank.com/en.html",
+        "logo": "/logos/scotiabank.svg",
+        "tags": ["Vue.js", "ASP.NET Core", ".NET", "Microsoft SQL Server", "GraphQL", "Python", "GitHub Actions", "ServiceNow"]
       }
     ]
 }

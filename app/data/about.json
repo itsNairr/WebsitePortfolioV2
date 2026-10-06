@@ -1,0 +1,44 @@
+{
+  "bio": "I'm a Mechatronics & Robotics Engineering student at Queen's University based in Toronto, currently building full-stack tools for Scotiabank's trading floors. I like working where software meets the physical world, from computer vision models for autonomous driving to the internal platforms people rely on every day.",
+  "location": "Toronto, Ontario",
+  "education": {
+    "school": "Queen's University",
+    "degree": "BASc in Mechatronics & Robotics Engineering",
+    "date": "Expected April 2027",
+    "logo": "/logos/queens.png",
+    "coursework": [
+      "Data Structures and Algorithms",
+      "Computer Architecture",
+      "Machine Learning",
+      "Digital Systems",
+      "Artificial Intelligence"
+    ]
+  },
+  "skills": [
+    {
+      "group": "Languages",
+      "items": ["Python", "TypeScript", "JavaScript", "C#", "C/C++", "HTML", "CSS"]
+    },
+    {
+      "group": "Web & Frameworks",
+      "items": ["React.js", "Next.js", "Vue.js", "ASP.NET Core", ".NET", "Redux", "Tailwind CSS", "GraphQL", "Flask"]
+    },
+    {
+      "group": "Databases",
+      "items": ["Microsoft SQL Server", "PostgreSQL"]
+    },
+    {
+      "group": "Data & ML",
+      "items": ["PyTorch", "NumPy", "Pandas", "OpenCV", "Roboflow"]
+    },
+    {
+      "group": "Tools & Platforms",
+      "items": ["Git", "GitHub Actions", "Jira", "Confluence", "Docker"]
+    }
+  ],
+  "certification": "AWS Certified AI Practitioner",
+  "community": {
+    "role": "Co-founder",
+    "org": "Queen's University Malayalee Association"
+  }
+}

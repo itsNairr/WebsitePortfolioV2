@@ -33,8 +33,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/Providers.jsx",
-    "app/components/Navbar.jsx",
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [

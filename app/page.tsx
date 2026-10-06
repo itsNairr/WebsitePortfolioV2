@@ -5,7 +5,7 @@ import Link from "next/link";
 import animationDataLight from "./lotties/scroll-down-light.json";
 import animationDataDark from "./lotties/scroll-down-dark.json";
 import { useSelector } from "react-redux";
-import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   FaEye,
   FaBriefcase,
@@ -17,8 +17,10 @@ import {
 } from "react-icons/fa";
 import "aos/dist/aos.css";
 import NavbarMain from "./components/NavbarMain";
+import GalaxyBackground from "./components/GalaxyBackground";
 import projectsData from "./data/projects.json";
 import jobsData from "./data/jobs.json";
+import type { RootState } from "./redux/store";
 
 const Lottie = dynamic(() => import("lottie-react").then((m) => m.Lottie), {
   ssr: false,
@@ -26,32 +28,10 @@ const Lottie = dynamic(() => import("lottie-react").then((m) => m.Lottie), {
 
 const links = [
   { href: "/experience", label: "Experience" },
-  { href: "/skills-projects", label: "Skills & Projects" },
+  { href: "/projects", label: "Projects" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
-
-const blobs = [
-  { top: "-5%", left: "0%", size: "clamp(260px, 45vw, 680px)", from: "hsl(158, 82%, 57%, 0.85)", to: "hsl(252, 82%, 57%)", speed: "5s" },
-  { top: "35%", left: "50%", size: "clamp(280px, 50vw, 760px)", from: "hsl(330, 90%, 60%, 0.85)", to: "hsl(25, 95%, 58%)", speed: "7s" },
-  { top: "-15%", left: "55%", size: "clamp(220px, 40vw, 600px)", from: "hsl(195, 95%, 55%, 0.85)", to: "hsl(225, 90%, 60%)", speed: "6s" },
-  { top: "50%", left: "-10%", size: "clamp(240px, 42vw, 640px)", from: "hsl(48, 96%, 58%, 0.85)", to: "hsl(340, 85%, 60%)", speed: "8s" },
-  { top: "20%", left: "25%", size: "clamp(200px, 34vw, 520px)", from: "hsl(275, 85%, 62%, 0.85)", to: "hsl(185, 85%, 50%)", speed: "9s" },
-  { top: "65%", left: "30%", size: "clamp(180px, 30vw, 460px)", from: "hsl(210, 90%, 60%, 0.85)", to: "hsl(290, 80%, 60%)", speed: "6.5s" },
-  { top: "5%", left: "80%", size: "clamp(160px, 26vw, 400px)", from: "hsl(140, 70%, 50%, 0.85)", to: "hsl(200, 90%, 55%)", speed: "7.5s" },
-];
-
-// Deterministic pseudo-random star field so server and client render the same markup.
-const stars = Array.from({ length: 90 }, (_, i) => {
-  const rand = (n: number) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
-  return {
-    top: `${(rand(1) * 100).toFixed(2)}%`,
-    left: `${(rand(2) * 100).toFixed(2)}%`,
-    size: rand(3) < 0.8 ? 2 : 3,
-    duration: `${(2 + rand(4) * 4).toFixed(2)}s`,
-    delay: `${(-rand(5) * 6).toFixed(2)}s`,
-  };
-});
 
 type Highlight = {
   icon: ReactNode;
@@ -87,7 +67,7 @@ function HighlightCard({ highlight, index }: { highlight: Highlight; index: numb
       data-aos-delay={200 + index * 100}
     >
       <div
-        className="flex items-center gap-4 xs:gap-3 rounded-2xl bg-cardlight/80 dark:bg-carddark/80 backdrop-blur-md shadow-lg px-5 py-4 xs:px-3 xs:py-2"
+        className="liquid-glass flex items-center gap-4 xs:gap-3 rounded-3xl px-5 py-4 xs:px-3 xs:py-2"
         style={{ animation: `float 6s ease-in-out ${-index * 1.3}s infinite` }}
       >
         <div
@@ -107,7 +87,7 @@ function HighlightCard({ highlight, index }: { highlight: Highlight; index: numb
 }
 
 export default function Home() {
-  const isDark = useSelector((state: any) => state.themeReducer.isDark);
+  const isDark = useSelector((state: RootState) => state.themeReducer.isDark);
   const [greeting, setGreeting] = useState("Hello,");
 
   useEffect(() => {
@@ -128,39 +108,7 @@ export default function Home() {
   return (
     <>
       <NavbarMain />
-      <div className="blobs">
-        {blobs.map((blob, index) => (
-          <div
-            key={index}
-            className="blob"
-            style={
-              {
-                top: blob.top,
-                left: blob.left,
-                "--size": blob.size,
-                "--from": blob.from,
-                "--to": blob.to,
-                "--speed": blob.speed,
-              } as CSSProperties
-            }
-          />
-        ))}
-      </div>
-      <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
-        {stars.map((star, index) => (
-          <span
-            key={index}
-            className="absolute rounded-full bg-slate-500 dark:bg-white"
-            style={{
-              top: star.top,
-              left: star.left,
-              width: star.size,
-              height: star.size,
-              animation: `twinkle ${star.duration} ease-in-out ${star.delay} infinite`,
-            }}
-          />
-        ))}
-      </div>
+      <GalaxyBackground />
       <main className="relative z-10 min-h-screen max-h-full pt-10">
         <section className="relative min-h-screen flex flex-col items-center justify-center px-5 pt-[80px] pb-[120px]">
           <h1 className="flex flex-col items-center text-center">
@@ -171,7 +119,7 @@ export default function Home() {
               Hari Nair
             </span>
           </h1>
-          <div className="md:flex sm:flex xs:flex flex-wrap justify-center gap-4 xs:gap-3 mt-10 max-w-[800px]">
+          <div className="md:flex sm:flex xs:flex flex-wrap justify-center gap-x-4 gap-y-6 xs:gap-x-3 mt-10 max-w-[800px]">
             {highlights.map((highlight, index) => (
               <HighlightCard key={highlight.title} highlight={highlight} index={index} />
             ))}

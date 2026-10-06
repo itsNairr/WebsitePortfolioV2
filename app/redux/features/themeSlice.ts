@@ -1,19 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
+// Dark by default; "false" in localStorage means the visitor chose light.
+// (app/layout.tsx applies the same rule before first paint.)
+const initialIsDark = typeof window === "undefined" || localStorage.getItem("isDark") !== "false";
 
-export const theme = createSlice({ 
-    name: 'theme',
-    initialState: { isDark: typeof window !== 'undefined' ? localStorage.getItem('isDark') === 'false' ? false : true : true},
-    reducers: {
-        toggleTheme: (state) => {
-            const newTheme = !state.isDark;
-            localStorage.setItem('isDark', String(newTheme));
-            return {
-                isDark: newTheme
-            }
-        }
-    }
-})
+const themeSlice = createSlice({
+  name: "theme",
+  initialState: { isDark: initialIsDark },
+  reducers: {
+    toggleTheme: (state) => {
+      state.isDark = !state.isDark;
+      localStorage.setItem("isDark", String(state.isDark));
+    },
+  },
+});
 
-export const { toggleTheme } = theme.actions
-export default theme.reducer;
+export const { toggleTheme } = themeSlice.actions;
+export default themeSlice.reducer;

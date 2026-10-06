@@ -1,18 +1,17 @@
-import React from 'react'
-import Navbar from '../components/Navbar';
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import Navbar from "../components/Navbar";
 
+export const metadata: Metadata = {
+  title: "About",
+  description: "Education, skills and community work of Hari Nair, Mechatronics & Robotics Engineering student at Queen's University.",
+};
 
-export const metadata = {
-  title: 'About',
-  description: '',
-}
- 
-export default function OrderLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
- return (
-      <section><Navbar/>{children}</section>
-  )
+export default function Layout({ children }: { children: ReactNode }) {
+  return (
+    <section>
+      <Navbar />
+      {children}
+    </section>
+  );
 }

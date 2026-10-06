@@ -1,18 +1,14 @@
-"use client";
+import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
-
-import React from "react";
 function Footer() {
   const year = new Date().getFullYear();
   return (
     <>
       <div className="flex flex-col items-center dark:text-white p-10 gap-10 dark:bg-dark bg-light">
-        <div id="items" className="flex flex-row flex-wrap gap-10 text-[30px]">
+        <div id="items" className="flex flex-row flex-wrap gap-10 sm:gap-7 xs:gap-6 text-[30px] sm:text-[24px] xs:text-[22px]">
           <a
             className="item"
-            href="https://www.linkedin.com/in/hari-nair-0a1627251/"
+            href="https://www.linkedin.com/in/harinairr"
             target="blank"
           >
             <FaLinkedinIn />
@@ -24,7 +20,7 @@ function Footer() {
             <FaInstagram />
           </a>
         </div>
-        <div className="text-centerduration-500">
+        <div className="text-center">
           &copy; {year} Harikrishna Nair{" "}
         </div>
       </div>
