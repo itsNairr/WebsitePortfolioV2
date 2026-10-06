@@ -1,6 +1,6 @@
 "use client";
 
-import { TbFileCv } from "react-icons/tb";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 
 import React from "react";
@@ -20,8 +20,8 @@ function Footer() {
           <a className="item" href="https://github.com/itsNairr" target="blank">
             <FaGithub />
           </a>
-          <a className="item" href="./Hari_Nair_Resume.pdf" target="blank">
-            <TbFileCv />
+          <a className="item" href="https://www.instagram.com/harinairr/" target="blank">
+            <FaInstagram />
           </a>
         </div>
         <div className="text-centerduration-500">

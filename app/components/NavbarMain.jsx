@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react";
-import { TbFileCv } from "react-icons/tb";
+import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 import { IoSunny } from "react-icons/io5";  
 import { BsMoonStarsFill } from "react-icons/bs"
@@ -21,7 +21,7 @@ function NavbarMain() {
           <div id="items" className="flex flex-row gap-10">
             <a className="item" data-aos="zoom-in" href="https://www.linkedin.com/in/hari-nair-0a1627251/" target="blank"><FaLinkedinIn /></a>
             <a className="item" data-aos="zoom-in" href="https://github.com/itsNairr" target="blank"><FaGithub /></a>
-            <a className="item" data-aos="zoom-in" href="./Hari_Nair_Resume.pdf" target="blank"><TbFileCv /></a>
+            <a className="item" data-aos="zoom-in" href="https://www.instagram.com/harinairr/" target="blank"><FaInstagram /></a>
             <button className="item" data-aos="zoom-in" onClick={() => dispatch(toggleTheme())}>{isDark && <BsMoonStarsFill />}{!isDark && <IoSunny/>}</button>
           </div>
         </div>
