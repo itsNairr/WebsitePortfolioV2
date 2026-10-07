@@ -47,16 +47,20 @@ html::-webkit-scrollbar {
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.52;
 }
 
+/* Soft two-tone glow drawn with radial gradients rather than filter: blur(). Large blur
+   filters are very slow in Safari/WebKit (every browser on iPhone); gradients look the same
+   and cost almost nothing. The box is larger to cover where the blur used to spread. */
 .blob {
   position: absolute;
-  width: var(--size);
-  height: var(--size);
-  filter: blur(calc(var(--size) / 5));
-  background-image: linear-gradient(var(--from), var(--to));
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  width: calc(var(--size) * 1.8);
+  height: calc(var(--size) * 1.8);
+  margin: calc(var(--size) * -0.4);
+  background:
+    radial-gradient(ellipse 50% 42% at 50% 42%, var(--from) 15%, transparent 100%),
+    radial-gradient(ellipse 50% 42% at 50% 58%, var(--to) 15%, transparent 100%);
 }
 
 @keyframes float {

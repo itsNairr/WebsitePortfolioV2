@@ -1,10 +1,10 @@
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   const year = new Date().getFullYear();
   return (
     <>
-      <div className="flex flex-col items-center dark:text-white p-10 gap-10 dark:bg-dark bg-light">
+      <div className="relative z-10 flex flex-col items-center dark:text-white p-10 gap-10">
         <div id="items" className="flex flex-row flex-wrap gap-10 sm:gap-7 xs:gap-6 text-[30px] sm:text-[24px] xs:text-[22px]">
           <a
             className="item"
@@ -18,6 +18,9 @@ function Footer() {
           </a>
           <a className="item" href="https://www.instagram.com/harinairr/" target="blank">
             <FaInstagram />
+          </a>
+          <a className="item" href="mailto:hariknair139@gmail.com" aria-label="Email">
+            <FaEnvelope />
           </a>
         </div>
         <div className="text-center">
