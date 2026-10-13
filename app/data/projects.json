@@ -166,7 +166,7 @@
   },
   {
    "id": 14,
-   "title": "Rivian Mission Control — Enterprise Telematics & Digital Twin Engine",
+   "title": "Rivian Mission Control: Enterprise Telemetry & Digital Twin Engine",
    "description": "A real-time EV fleet telemetry and remote operations platform built in Go and TypeScript, inspired by Rivian OS 2. A custom 5-byte TCP framing protocol with Protocol Buffers cut wire payload 5.45x versus JSON over HTTP, while a 10-worker pool ingested 200 concurrent vehicle streams at 1 Hz with zero dropped messages. Cloud-to-vehicle commands are secured with ECDSA (secp256r1) signatures and motion-gated safety interlocks, measuring 0.094 ms p50 round-trip latency over local TCP. The Three.js/React operations console streams live fleet state over WebSockets batched into 250 ms render flushes, with 3D vehicle views and an event-driven rules engine flagging battery thermal events above 55°C and cell voltage imbalances over 0.10 V across 9 simulated Tesla and Rivian models on California highway routes.",
    "tags": [
     "Go",
